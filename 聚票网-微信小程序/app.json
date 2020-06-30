@@ -2,7 +2,7 @@
   "pages": [
     "pages/home/home",
     "pages/ticket/ticket",
-    "pages/orderDetail/orderDetail",
+    "pages/orderDetail/orderDetail", 
     "pages/index/index",
     "pages/order/order",
     "pages/searchResult/searchResult",
