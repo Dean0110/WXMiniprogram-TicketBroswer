@@ -1,0 +1,16 @@
+<!--components/MyTitle/MyTitle.wxml-->
+<view class="my_title">
+<view class="logo">
+    <image class="logo_img" src="../../icons/icon.jpg" />
+</view>
+<navigator class="search_icon">
+    <image class="search_img" src="../../icons/search.jpg" />
+</navigator>
+<navigator class="user_icon">
+    <image class="user_img" src="../../icons/user.jpg" />
+</navigator>
+<navigator class="down_app">
+ 下载APP
+</navigator>
+</view>
+

@@ -1,0 +1,3 @@
+<!--pages/ticket/ticket_main.wxml-->
+<view>{{msg}}</view>
+<button bindtap="Clickhere">点击此处</button>

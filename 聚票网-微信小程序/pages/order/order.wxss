@@ -1,0 +1,47 @@
+/* pages/order/order.wxss */
+.order_wrap{
+
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.status{
+    background-color: green;
+    color:white;
+}
+
+.number{
+    font-size: 28rpx;
+}
+.info{
+    border-top: 3rpx solid #666;
+    border-bottom: 3rpx solid #666;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+}
+.detail .img{
+    flex:3;
+}
+.img image{
+    width: 90%;
+    height: 50%;
+}
+.detailInfo{
+    flex:7;
+    display: flex;
+    flex-direction: column;
+}
+
+.time{
+    font-size: 40rpx;
+}
+
+.totalprice{
+    color: red;
+    font-weight: bold;
+}
+

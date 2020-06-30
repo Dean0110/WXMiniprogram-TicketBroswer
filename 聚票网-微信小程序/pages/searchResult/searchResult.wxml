@@ -1,0 +1,20 @@
+<view class="searchResult">
+    <view class="title">
+        <input placeholder="搜索" />
+        <text >取消</text>
+    </view>
+    <view class="list">
+    <navigator class="info" wx:for="{{detailList}}" wx:key="{{index}}" url="../ticket/ticket">
+        <view class="img">
+            <image src="{{item.imgSrc}}" mode="widthFix" />
+        </view>
+        <view class="detail" url="../ticket/ticket">
+            <text class="Title">{{item.title}}</text>
+            <text class="date">{{item.dateTime}}</text>
+            <text class="place">{{item.place}}</text>
+            <text >\n</text>
+            <text class="price">{{item.price}}</text>
+        </view>
+    </navigator>
+    </view>
+</view>
