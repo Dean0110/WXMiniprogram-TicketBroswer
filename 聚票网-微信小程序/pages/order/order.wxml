@@ -4,7 +4,7 @@
         <text class="status">交易成功</text>
         <text class="ordernumber">订单编号：24592077</text>
     </view>
-    <navigator class="info"  url="../orderdetail/orderdetail">
+    <navigator class="info"  url="../orderDetail/orderDetail">
         <text class="title">2019林俊杰[圣所]世界巡回演唱会</text>
         <view class="detail">
             <view class="img">

@@ -1,4 +1,4 @@
-// pages/shouye/shouye.js
+// pages/home/home.js
 Page({
 
   /**
