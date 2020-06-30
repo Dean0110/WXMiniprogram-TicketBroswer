@@ -1,0 +1,80 @@
+<view class="orderdetail">
+
+    <view style="display: flex; justify-content: center; align-items: center;">
+       <image class="order-headimage" src="../../img/orderimg/2.jpg"></image>
+    </view>
+    <view class="paymentInformation">
+        <view class="paymentinfo">
+            <text >演出信息</text>
+        </view>
+        <view class="Title">
+            <text >商品名称：</text>
+            <text class="title">2019林俊杰[圣所]世界巡回演唱会 河南站</text>
+        </view>
+        <view class="Time">
+            <text >演出时间：</text>
+            <text class="time">2019-04-13 19:30</text>
+        </view>
+    </view>
+        <!-- <view class="choice">
+            <button>取消订单</button>
+            <button>支付</button>
+        </view> -->
+    <view class="OrderInformation">
+        <view class="OrderInfo">
+            <text class="Orderinfo">订单信息</text>
+        </view>
+
+        <view class="Ordernumber">
+            <text >订单编号：</text>
+            <text class="ordernumber">24592077</text>
+        </view>
+
+        <view class="Ordertime">
+            <text >下单时间：</text>
+            <text class="ordertime">2018.12.28 10:01:23</text>
+        </view>
+
+        <view class="Orderstatus">
+            <text >订单状态：</text>
+            <text class="orderstatus">支付成功</text>
+        </view>
+
+        <view class="Ordertotalprice">
+            <text >商品总价：</text>
+            <text class="ordertotalprice">380.00元</text>
+        </view>
+    </view>
+        
+    <view class="Dispatchment">
+        <view class="Dispatchmentinfo">
+            <text class="dispatchmentinfo">配送信息</text>
+        </view>
+
+        <view class="Dispatchmentstyle">
+            <text >配送方式：</text>
+            <text class="dispatchmentstyle">快递</text>
+        </view>
+
+        <view class="Dispatchmentnumber">
+            <text >配送号：</text>
+            <text class="dispatchmentnumber">2459207711</text>
+        </view>
+
+        <view class="Dispatchmentaddress">
+            <text >配送地址：</text>
+            <text class="dispatchmentaddress">重庆市沙坪坝区重庆大学虎溪校区</text>
+        </view>
+    </view>
+    <view class="choice">
+        <button class="again">再次购票</button>
+        <button class="quit" >取消订单</button>
+    </view>
+    <text >\n</text>
+    <text >\n</text>
+    <text >\n</text>
+    <text >\n</text>
+    <text >\n</text>
+    <text >\n</text>
+    <text >\n</text>
+</view>

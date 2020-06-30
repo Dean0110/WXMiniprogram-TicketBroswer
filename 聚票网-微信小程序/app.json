@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/ticket/ticket",
+    "pages/orderDetail/orderDetail", 
+    "pages/index/index",
+    "pages/order/order",
+    "pages/searchResult/searchResult",
+    "pages/detail/detail",
+    "pages/user/userMain",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00aa99",
+    "navigationBarTitleText": "聚票网",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backGroundColor": "black",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "img/icon/首页.png",
+        "selectedIconPath": "img/icon/首页.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "iconPath": "img/icon/订单.png",
+        "selectedIconPath": "img/icon/订单.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/user/userMain",
+        "iconPath": "img/icon/我的.png",
+        "selectedIconPath": "img/icon/我的.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

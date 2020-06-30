@@ -1,0 +1,36 @@
+<view class="detail_page">
+<MyTitle></MyTitle>
+<view class="video_info">
+    <video src="{{videoInfo.videoSrc}}" controls="{{true}}" custom-cache="{{false}}"/>
+    <view class="video_title">
+        {{videoInfo.videoTitle}}
+    </view>
+    <view class="video_detail">
+        <text class="author">{{videoInfo.author}}</text>
+        <text class="play_count">{{videoInfo.playCount}}次播放</text>
+        <text class="comment_count">{{videoInfo.commentCount}}弹幕</text>
+        <text class="date">{{videoInfo.date}}</text>
+    </view>
+</view>
+<view class="comment_wrap">
+    <view class="comment_title">
+        评论( {{commentData.commentTotalCount}} )
+    </view>
+    <view class="comment_list">
+    <view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+        <view class="comment_userIcon">
+            <image src="{{item.userIconSrc}}" mode="widthFix"/>
+        </view>
+        <view class="comment_info">
+            <view class="comment_detail">
+                <text class="author">{{item.username}}</text>
+                <text class="date">{{item.commentDate}}</text>
+            </view>
+            <view class="comment_content">
+                {{item.commentInfo}}
+            </view>
+        </view>
+    </view>
+    </view>
+</view>
+</view>
