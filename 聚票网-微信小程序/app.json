@@ -2,13 +2,14 @@
   "pages": [
     "pages/home/home",
     "pages/ticket/ticket",
-    "pages/orderDetail/orderDetail",
     "pages/index/index",
     "pages/order/order",
     "pages/searchResult/searchResult",
     "pages/detail/detail",
     "pages/user/userMain",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/orderDetail/orderDetail",
+    "pages/orderDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
