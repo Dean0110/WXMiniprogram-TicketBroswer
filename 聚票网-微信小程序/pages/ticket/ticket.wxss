@@ -1,0 +1,133 @@
+/* pages/ticket/ticket.wxss */
+page{
+    background-color: rgb(66, 64, 64);
+}
+.ticket{
+    position: relative;
+}
+
+.top{
+    height:200rpx;
+    margin-top: 5rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top .img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:3;
+}
+
+.img image{
+    width: 80%;
+    
+}
+
+.title{
+    flex:5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.theme{
+    font-size: 40rpx;
+    color:white;
+}
+
+.price{
+    color: rgb(240, 50, 107);
+}
+
+.main{
+    position: absolute;
+    top: 150rpx;
+    width: 100%;
+    background-color:rgb(230, 228, 228);
+    z-index: -10;
+    border-radius: 20rpx 20rpx 0 0;
+}
+.main .time{
+    padding: 5rpx 30rpx;
+    margin-top: 150rpx ;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1rpx solid #666;
+}
+
+.main .place{
+    padding: 5rpx 30rpx;
+    margin-top: 20rpx ;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1rpx solid #666;
+}
+
+.dateTime,.housename{
+    color: black;
+    font-size: 40rpx;
+}
+
+.desc,.location{
+    font-size: 30rpx;
+    color: gray;
+}
+
+.function{
+    margin-top: 100rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.detail,.notice,.recommend{
+    background-color:rgb(230, 228, 228);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomB{
+    width: 100%;
+    position: fixed;
+    bottom:10rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.share {
+    flex:1;
+    width: 50%;
+    border: 1rpx solid pink;
+    border-radius: 50rpx;
+}
+
+.purchase{
+    flex:3;
+    width: 50%;
+    background-color: red;
+    border-radius: 50rpx;
+}
+
+
+/* 新增 */
+.function{
+    border-bottom: 3rpx solid #666;
+}
+.function button::after{
+    border: none;
+}
+.detailinfo{
+    display: flex;
+    flex-direction: column;
+}
+.detailinfo text{
+    padding:10rpx 50rpx;
+    margin-top: 50rpx;
+    font-size: 30rpx;
+}
+.detailinfo image{
+    margin-left: 200rpx;
+    margin-right: 200rpx;
+    width: 50%;
+}
