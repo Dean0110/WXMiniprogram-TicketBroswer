@@ -1,4 +1,4 @@
-/* pages/orderdetail/orderdetail.wxss */
+/* pages/orderDetail/orderDetail.wxss */
 
 .order-headimage{
     width: 30%;

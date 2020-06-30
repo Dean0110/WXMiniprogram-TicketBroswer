@@ -1,4 +1,4 @@
-// pages/orderdetail/orderdetail.js
+// pages/orderDetail/orderDetail.js
 Page({
 
   /**
