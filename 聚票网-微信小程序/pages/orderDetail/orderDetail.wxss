@@ -1,0 +1,64 @@
+/* pages/orderdetail/orderdetail.wxss */
+
+.order-headimage{
+    width: 30%;
+    height: 300rpx;
+}
+
+.Title,.Time,.Ordernumber,.Ordertime,.Orderstatus,.Ordertotalprice{
+    padding: 30rpx;
+    height:50rpx;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 3rpx solid #666;
+}
+
+.paymentinfo,.Dispatchmentinfo,.Dispatchmentstyle,.Dispatchmentnumber,.Dispatchmentaddress,.OrderInfo{
+    padding: 30rpx;
+    height:50rpx;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-bottom: 3rpx solid #666;
+}
+.ordertotalprice{
+    color: red;
+}
+.OrderInfo,.Dispatchmentinfo,.paymentinfo{
+    background-color: rgb(202, 202, 202);
+}
+text{
+    font-size: 30rpx;
+    color:gray;
+}
+.title,.time,.orderinfo,.ordernumber,.ordertime,.orderstatus{
+   
+    color: black;
+}
+
+.dispatchmentstyle,.dispatchmentnumber,.dispatchmentaddress{
+    
+    color: black;
+}
+
+.title{
+    font-weight: bold;
+}
+.choice{
+    position: fixed;
+    bottom: 10rpx;
+    left: 10rpx;
+    right: 10rpx;
+    display: flex;
+    justify-content: space-around;
+}
+
+.again{
+    background-color: rgb(85, 218, 85);
+    color: white;
+}
+.quit{
+    color: white;
+    background-color: rgb(245, 74, 22);
+}
