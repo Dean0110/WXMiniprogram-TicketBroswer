@@ -8,7 +8,7 @@
         <text class="title">2019林俊杰[圣所]世界巡回演唱会</text>
         <view class="detail">
             <view class="img">
-                <image src="../../orderimg/2.jpg"  mode="widthFix"/>
+                <image src="../../img/orderimg/2.jpg"  mode="widthFix"/>
             </view>
             <view class="detailInfo">
                 <text class="time">时间：2018.12.28 10:01:23</text>

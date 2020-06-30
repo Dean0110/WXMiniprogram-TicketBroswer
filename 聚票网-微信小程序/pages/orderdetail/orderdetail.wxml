@@ -1,7 +1,7 @@
 <view class="orderdetail">
 
     <view style="display: flex; justify-content: center; align-items: center;">
-       <image class="order-headimage" src="../../orderimg/2.jpg"></image>
+       <image class="order-headimage" src="../../img/orderimg/2.jpg"></image>
     </view>
     <view class="paymentInformation">
         <view class="paymentinfo">

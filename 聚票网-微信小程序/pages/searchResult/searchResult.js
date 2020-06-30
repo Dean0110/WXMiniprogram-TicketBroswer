@@ -7,28 +7,28 @@ Page({
   data: {
     detailList:[
     {
-        "imgSrc":"../../recommend/6.jpg",
+        "imgSrc":"../../img/recommend/6.jpg",
         "title":"曹轩宾2020[我]巡回演唱会 西安站",
         "dateTime":"2020.10.16 20:30",
         "place":"西安|MAO Livehouse",
         "price":"￥150起"
     },
     {
-      "imgSrc":"../../recommend/1.jpg",
+      "imgSrc":"../../img/recommend/1.jpg",
       "title":"扯馆儿喜剧专场——寅派动力",
       "dateTime":"2020.07.02-07.05",
       "place":"重庆|寅派动力",
       "price":"￥80起"
     },
     {
-      "imgSrc":"../../recommend/2.jpg",
+      "imgSrc":"../../img/recommend/2.jpg",
       "title":"开心麻花爆笑舞台剧《乌龙山伯爵》",
       "dateTime":"2020.07.10-07.12",
       "place":"重庆|重庆文化宫大剧院",
       "price":"￥100起"
   },
   {
-    "imgSrc":"../../recommend/3.jpg",
+    "imgSrc":"../../img/recommend/3.jpg",
     "title":"《重逢岛》新媒体艺术展",
     "dateTime":"2020.06.06-08.16",
     "place":"重庆|原美术馆",

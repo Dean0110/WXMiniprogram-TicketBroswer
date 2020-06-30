@@ -2,7 +2,7 @@
 <view class="ticket">
     <view class="top">
         <view class="img">
-            <image mode="widthFix" src="../../recommend/6.jpg" />
+            <image mode="widthFix" src="../../img/recommend/6.jpg" />
         </view>
         <view class="title">
             <text class="theme">【西安】曹轩宾2020[我]全国巡回演唱会 西安站</text>
@@ -34,13 +34,13 @@
         <view class="detailinfo">
             <text >音乐人 曹轩宾，2020开启全新音乐旅程，[我]全国巡回演唱会正式启动</text>
             <text >"我"是曹轩宾音乐和人生哲思不断进化的总结</text>
-            <image mode="scaleToFill" src="../../recommend/6.1.png" />
+            <image mode="scaleToFill" src="../../img/recommend/6.1.png" />
             <text >不争</text>
             <text >不抢</text>
             <text >不卑</text>
             <text >不亢</text>
             <text >如"我"</text>
-            <image mode="scaleToFill" src="../../recommend/6.2.png" />
+            <image mode="scaleToFill" src="../../img/recommend/6.2.png" />
         </view>
     </view>
 </view>
