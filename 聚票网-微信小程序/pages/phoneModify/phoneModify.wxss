@@ -1,29 +1,34 @@
 /* pages/phoneModify/phoneModify.wxss */
 
 #formerPhone{
+  display: flex;
   width: 60%;
   height: 60rpx;
   margin: auto;
-
-  border: 3rpx solid #666;
+  justify-content: center;
   border-radius: 10rpx;
-  text-align: center;
 }
 
 #newPhone{
   width: 60%;
   height: 60rpx;
   margin: auto;
-  margin-top: 100rpx;
+  margin-top: 175rpx;
   border: 3rpx solid #666;
   border-radius: 10rpx;
+}
+
+#phoneModify{
+  margin-top: 250rpx;
 }
 
 #phoneModify image{
   width: 128rpx;
   height: 128rpx;
+  display: flex;
+  align-items: center;
   margin: auto;
-  margin-top: 150rpx;
+  margin-top: 200rpx;
   border-radius: 20rpx;
   align-items: center;
   box-shadow: 10rpx 10rpx 5rpx #888888;

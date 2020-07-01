@@ -1,1 +1,35 @@
 /* pages/deliveryAddress/deliveryAddress.wxss */
+
+#formerAddress{
+  display: flex;
+  width: 60%;
+  height: 60rpx;
+  margin: auto;
+  justify-content: center;
+  border-radius: 10rpx;
+}
+
+#newAddress{
+  width: 60%;
+  height: 120rpx;
+  margin: auto;
+  margin-top: 175rpx;
+  border: 3rpx solid #666;
+  border-radius: 10rpx;
+}
+
+#addressModify{
+  margin-top: 250rpx;
+}
+
+#addressModify image{
+  width: 128rpx;
+  height: 128rpx;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 200rpx;
+  border-radius: 20rpx;
+  align-items: center;
+  box-shadow: 10rpx 10rpx 5rpx #888888;
+}

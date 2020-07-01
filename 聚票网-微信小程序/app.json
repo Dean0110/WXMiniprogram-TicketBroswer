@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/phoneModify/phoneModify",
+
     "pages/home/home",
     "pages/welcome/welcome",
     "pages/ticket/ticket",
@@ -15,7 +15,7 @@
     "pages/logs/logs",
     "pages/subscribe/subscribe",
     "pages/booker/booker",
-
+    "pages/phoneModify/phoneModify",
     "pages/discountCoupon/discountCoupon",
     "pages/deliveryAddress/deliveryAddress",
     "pages/feedback/feedback",

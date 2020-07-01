@@ -1,6 +1,6 @@
 <!--pages/phoneModify/phoneModify.wxml-->
 <view id="phoneModify">
-  <text id="formerPhone">已绑定号码：15111222333</text>
-  <textarea id="newPhone" placeholder="请输入新号码"></textarea>
+  <text id="formerPhone">已绑定号码：\n15111222333</text>
+  <input id="newPhone" type="number" placeholder="请输入新号码"></input>
   <image bindtap="submitPhone" src="../../img/icon/提交.png"></image>
 </view>
