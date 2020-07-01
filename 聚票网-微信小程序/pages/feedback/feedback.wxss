@@ -1,1 +1,29 @@
 /* pages/feedback/feedback.wxss */
+.feedback{
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-input{
+  width: 80%;
+  height: 500rpx;
+  margin: auto;
+  margin-top: 100rpx;
+  border: 3rpx solid #666;
+  border-radius: 30rpx;
+  box-shadow: 10rpx 10rpx 5rpx #888888;
+}
+
+.feedback-input-hint{
+  font-size: 35rpx;
+}
+
+.feedback image{
+  width: 128rpx;
+  height: 128rpx;
+  margin: auto;
+  margin-top: 150rpx;
+  border-radius: 20rpx;
+  align-items: center;
+  box-shadow: 10rpx 10rpx 5rpx #888888;
+}

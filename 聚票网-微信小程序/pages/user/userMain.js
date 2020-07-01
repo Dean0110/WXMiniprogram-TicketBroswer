@@ -9,12 +9,12 @@ Page({
   data: {
     userInfo:{},
     menuitems:[
-      { text: '订阅', url: '../userinfo/userinfo', icon: '../../img/icon/订阅.png'},
-      { text: '优惠券', url: '../userinfo/userinfo', icon: '../../img/icon/优惠券.png'},
-      { text: '购票人', url: '../userinfo/userinfo', icon: '../../img/icon/购票人.png'},
-      { text: '收货地址', url: '../userinfo/userinfo', icon: '../../img/icon/收货地址.png'},
-      { text: '修改号码', url: '../userinfo/userinfo', icon: '../../img/icon/修改号码.png'},
-      { text: '意见反馈', url: '../userinfo/userinfo', icon: '../../img/icon/意见反馈.png'}
+      { text: '订阅', url: '../subscribe/subscribe', icon: '../../img/icon/订阅.png'},
+      { text: '优惠券', url: '../discountCoupon/discountCoupon', icon: '../../img/icon/优惠券.png'},
+      { text: '购票人', url: '../booker/booker', icon: '../../img/icon/购票人.png'},
+      { text: '收货地址', url: '../deliveryAddress/deliveryAddress', icon: '../../img/icon/收货地址.png'},
+      { text: '修改号码', url: '../phoneModify/phoneModify', icon: '../../img/icon/修改号码.png'},
+      { text: '意见反馈', url: '../feedback/feedback', icon: '../../img/icon/意见反馈.png'}
     ]
   },
 

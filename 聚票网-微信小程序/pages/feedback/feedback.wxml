@@ -1,2 +1,6 @@
 <!--pages/feedback/feedback.wxml-->
-<text>pages/feedback/feedback.wxml</text>
+<view class="feedback">
+  <textarea class="feedback-input" maxlength="256"
+   placeholder="请输入您的意见或建议" placeholder-class="feedback-input-hint"></textarea>
+  <image bindtap="submitFeedback" src="../../img/icon/提交反馈.png" ></image>
+</view>

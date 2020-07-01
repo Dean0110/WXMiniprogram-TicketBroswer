@@ -10,7 +10,7 @@
 
 <view class="list-wrapper">
   <view wx:for="{{menuitems}}" wx:key="item">
-    <navigator url="{{item.url}}" class="list-item" hover-class="list-item_active">
+    <navigator url="{{item.url}}" class="list-item">
       <view class='userinfo-item'>
         <image class="useritem-image" src="{{item.icon}}"></image>
         <text class="useritem-text">{{item.text}}</text>
