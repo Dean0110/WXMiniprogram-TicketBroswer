@@ -1,4 +1,4 @@
-// pages/merchantInfo/merchantInfo.js
+// pages/infoMerchant/infoMerchant.js
 Page({
 
   /**
