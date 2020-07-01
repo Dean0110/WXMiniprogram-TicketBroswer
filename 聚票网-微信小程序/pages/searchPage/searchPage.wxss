@@ -1,1 +1,72 @@
 /* pages/searchPage/searchPage.wxss */
+Page{
+    background-color:rgb(248, 245, 245);
+
+}
+.top{
+    padding-top: 10rpx;
+    display: flex;
+    justify-content: start;
+}
+
+.top input{
+    margin-left: 20rpx;
+    font-size: 30rpx;
+    width: 500rpx;
+    padding-left: 10rpx;
+    border: 5rpx solid #666;
+    border-radius: 30rpx;
+}
+
+.top text{
+    margin-left: 50rpx;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historyTitle, .hotTitle{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    font-size: 36rpx;
+}
+
+.historyBody{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.historyBody view{
+    margin: 20rpx 20rpx;
+    display: block;
+    
+    width: auto;
+    border: 3rpx solid gray;
+    border-radius: 50rpx;
+}
+
+.historyBody view text{
+    padding: 20rpx;
+    color: black;
+    font-size: 32rpx;
+}
+
+.hotBody{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.hotBody view{
+    margin: 20rpx 20rpx;
+    display: block;
+    width: auto;
+    border: 3rpx solid gray;
+    border-radius: 50rpx;
+}
+
+.hotBody view text{
+    font-size: 32rpx;
+    padding: 20rpx;
+    color: black;
+}

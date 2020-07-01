@@ -1,6 +1,6 @@
 <view class="main">
 <view class="title_info">
-    <navigator url="../searchResult/searchResult">
+    <navigator url="../searchPage/searchPage">
         <input class="searchPage" placeholder="                 搜索" placeholder-class="input-hint"></input>
     </navigator>
     <image src="../../img/icon/搜索.png"></image>

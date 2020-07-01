@@ -1,1 +1,36 @@
 /* pages/subscribe/subscribe.wxss */
+.subscribe_item{
+    
+    margin-top:30rpx;
+    display: flex;
+    justify-content: start;
+    
+}
+.img{
+    margin-left: 30rpx;
+    flex:2;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+.info{
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: column;
+    flex:7;
+    justify-content: space-around;
+    justify-items: center;
+}
+.img image{
+    width: 90%;
+    border-radius: 50%;
+}
+.desc{
+    color: gray;
+    font-size: 32rpx;
+}
+.name{
+    color: black;
+    font-size: 40rpx;
+    font-weight: bolder;
+}
