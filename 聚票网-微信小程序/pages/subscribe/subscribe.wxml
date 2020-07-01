@@ -1,2 +1,13 @@
 <!--pages/subscribe/subscribe.wxml-->
-<text>pages/subscribe/subscribe.wxml</text>
+<view class="subscribe">
+    <view class="subscribe_item" 
+    wx:for="{{subscribeList}}" wx:key="{{index}}">
+        <view class="img">
+            <image mode="widthFix" src="{{item.imgSrc}}" />
+        </view>
+        <view class="info">
+            <text class="name">{{item.name}}</text>
+            <text class="desc">近期有{{item.number}}场演出</text>
+        </view>
+    </view>
+</view>

@@ -1,2 +1,45 @@
 <!--pages/searchPage/searchPage.wxml-->
-<text>pages/searchPage/searchPage.wxml</text>
+<view class="searchPage">
+    <view class="top">
+        <navigator url="../searchResult/searchResult" >
+        <input placeholder="输入商家、明星、演出关键词" />
+        </navigator>
+        <text >取消</text>
+    </view>
+    <view class="history">
+        <view class="historyTitle">
+            <text >历史搜索：</text>
+        </view>
+        <view class="historyBody">
+            <view>
+                <text >曹轩宾</text>
+            </view>
+            <view>
+                <text >周杰伦</text>
+            </view>
+        </view>
+    <view class="hot">
+        <view class="hotTitle">
+            <text >热门搜索：</text>
+        </view>
+        <view class="hotBody">
+            <view>
+                <text >周杰伦</text>
+            </view>
+            <view>
+                <text >开心麻花</text>
+            </view>
+            <view>
+                <text >邓紫棋</text>
+            </view>
+            <view>
+                <text >林俊杰</text>
+            </view>
+            <view>
+                <text >许嵩</text>
+            </view>  
+        </view>
+    </view>
+    </view>
+</view>
+

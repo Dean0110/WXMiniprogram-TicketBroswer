@@ -5,6 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
+    subscribeList:[
+    { "name":"林俊杰",
+      "imgSrc":"../../img/subscribe/林俊杰.jpg",
+      "number":4
+    },
+    { "name":"周杰伦",
+      "imgSrc":"../../img/subscribe/周杰伦.jpg",
+      "number":5
+    },
+    { "name":"刘德华",
+      "imgSrc":"../../img/subscribe/刘德华.jpg",
+      "number":2
+    }
+  ]
 
   },
 
