@@ -1,35 +1,24 @@
 /* pages/deliveryAddress/deliveryAddress.wxss */
-
-#formerAddress{
+.previous{
   display: flex;
-  width: 60%;
-  height: 60rpx;
-  margin: auto;
-  justify-content: center;
-  border-radius: 10rpx;
+  justify-content: start;
 }
 
-#newAddress{
-  width: 60%;
-  height: 120rpx;
-  margin: auto;
-  margin-top: 175rpx;
-  border: 3rpx solid #666;
-  border-radius: 10rpx;
+.previous .old{
+  white-space: nowrap;
 }
-
-#addressModify{
-  margin-top: 250rpx;
-}
-
-#addressModify image{
-  width: 128rpx;
-  height: 128rpx;
+.correct{
   display: flex;
-  align-items: center;
-  margin: auto;
-  margin-top: 200rpx;
-  border-radius: 20rpx;
-  align-items: center;
-  box-shadow: 10rpx 10rpx 5rpx #888888;
+  justify-content: start;
+}
+
+.previous,.correct{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+image{
+  margin-left: 650rpx;
+  margin-top: 20rpx;
+  width: 100rpx;
 }

@@ -131,3 +131,30 @@ page{
     margin-right: 200rpx;
     width: 50%;
 }
+
+.merchant{
+    margin-top: 50rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.merchant .img{
+    display: flex;
+    justify-content: center;
+    flex:2;
+}
+.merchant .info{
+    flex:5;
+}
+.merchant .img image{
+    border-radius: 50%;
+    width: 66%;
+}
+.merchant .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.merchant .info text{
+    color: black;
+    font-size: 36rpx;
+}

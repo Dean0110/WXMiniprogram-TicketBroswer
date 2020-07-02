@@ -1,2 +1,33 @@
-<!--pages/comment/comment.wxml-->
-<text>pages/comment/comment.wxml</text>
+
+<view class='container'> 
+    <view class="warning">
+        <text >为确保公正有效，非真实评价及作弊评价均不计入评分</text>
+    </view>
+    <view class='evaluate_contant'> 
+        <block wx:for='{{evaluate_contant}}' wx:key='' wx:for-index='idx'>
+            <view class='evaluate_item'> 
+                <view class='evaluate_title'>
+                </view> <!--星星评价 --> 
+                <view class='evaluate_box'> <!--内层循环展示每个评价条目的星星 --> 
+                <block wx:for="{{stars}}" wx:key=''> 
+                    <image class="star-image" style="left: {{item*80}}rpx" 
+                    src="{{scores[idx] > item ?(scores[idx]-item == 0.5?halfSrc:selectedSrc) : normalSrc}}"> 
+                        <view class="item" style="left:0rpx" 
+                        data-score="{{item + 0.5}}" 
+                        data-idx='{{idx}}' bindtap="selectLeft">
+                        </view> 
+                        <view class="item" style="left:20rpx" 
+                        data-score="{{item + 1}}" data-idx='{{idx}}' 
+                        bindtap="selectRight">
+                        </view> 
+                    </image> 
+                </block>
+                </view> 
+            </view> 
+            </block>
+            <textarea  placeholder="...说点什么..." maxlength="600"></textarea>
+    <button class='submit_button' bindtap='submit_evaluate' type='primary'>
+    提交
+    </button> 
+    </view>
+</view>

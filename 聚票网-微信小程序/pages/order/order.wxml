@@ -16,7 +16,14 @@
                     <text >\n</text>
                     <text class="number">价格：￥{{item.ticket.ticketPrice}} * {{item.ticketAmount}}</text>
                     <text >\n</text>
-                    <text class="totalprice">总价：￥{{item.totalPrice}}</text>
+                    <view class="bottomInfo">
+                        <text class="totalprice">总价：￥{{item.totalPrice}}</text>
+                        <view class="bottomButton">
+                        <navigator url="../comment/comment">
+                            <button class="comment" size="default" style="height:60rpx;">评价订单</button>
+                        </navigator>
+                        </view>
+                    </view>
                 </view>
             </view>
         </navigator>

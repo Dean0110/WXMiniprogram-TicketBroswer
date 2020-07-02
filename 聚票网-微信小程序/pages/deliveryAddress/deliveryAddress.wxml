@@ -1,7 +1,15 @@
 <!--pages/deliveryAddress/deliveryAddress.wxml-->
 <view id="addressModify">
-  <text id="formerAddress">现收货地址：\n重庆市沙坪坝区大学城重庆大学虎溪校区</text>
-  <input id="newAddress" type="text" placeholder="请输入新地址"></input>
-  <image bindtap="submitAddress" src="../../img/icon/提交.png"></image>
+  <view class="previous">
+    <text class="old">原有地址：</text>
+    <text id="formerAddress">重庆市沙坪坝区大学城重庆大学虎溪校区</text>
+  </view>
+  <view class="correct">
+    <text >修改地址：</text>
+    <input id="newAddress" type="text" placeholder="请输入新地址"></input>
+  </view>
+  
+  <image mode="widthFix" bindtap="submitAddress" src="../../img/icon/提交.png"></image>
+  
 </view>
 
