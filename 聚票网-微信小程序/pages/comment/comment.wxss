@@ -54,9 +54,9 @@
 }
 
 .warning text{
-    background-color: rgb(247, 200, 139);
+    background-color: rgb(247, 217, 139);
     font-size: 30rpx;
-    color: red;
+    color: rgb(255, 162, 0);
     border:3rpx solid rgb(228, 215, 215);
     border-radius: 30rpx;
 }
@@ -65,8 +65,60 @@ textarea{
     margin-top:33rpx;
     word-wrap: wrap;
     font-size: 36rpx;
-    height:750rpx;
+    height:400rpx;
     border: 2rpx solid rgb(240, 238, 238);
     border-radius: 30rpx;
     background-color:rgb(240, 238, 238);
+}
+/*新增*/
+
+.order_wrap{
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.status{
+    background-color: green;
+    color:white;
+}
+
+.number{
+    font-size: 28rpx;
+}
+.info{
+    border-top: 3rpx solid #666;
+    border-bottom: 3rpx solid #666;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+}
+.detail .img{
+    flex:3;
+}
+.img image{
+    width: 90%;
+    height: 50%;
+}
+.detailInfo{
+    flex:7;
+    display: flex;
+    flex-direction: column;
+}
+
+.time{
+    font-size: 40rpx;
+}
+
+.bottomInfo{
+    display: flex;
+    justify-content:space-between;
+    
+}
+.totalprice{
+    color: red;
+    font-weight: bold;
 }

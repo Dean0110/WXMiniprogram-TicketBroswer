@@ -1,4 +1,18 @@
 
+<navigator class="info">
+    <text class="title">{{item.ticket.title}}</text>
+    <view class="detail">
+        <view class="img">
+            <image src="{{item.ticket.imgsrc}}"  mode="widthFix"/>
+        </view>
+        <view class="detailInfo">
+            <text class="time">{{item.startTime}}</text>
+            <text >\n</text>
+            <text >\n</text>
+        </view>
+    </view>
+</navigator>
+
 <view class='container'> 
     <view class="warning">
         <text >为确保公正有效，非真实评价及作弊评价均不计入评分</text>
