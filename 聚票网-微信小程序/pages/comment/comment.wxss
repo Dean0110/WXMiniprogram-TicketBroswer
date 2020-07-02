@@ -14,6 +14,7 @@
 /*评价盒子 */
 .evaluate_box {
     position: absolute;
+    top: auto;
     left: 220rpx;
     width: 100%; 
     display: inline-block;
@@ -22,6 +23,7 @@
 /*星星评价的每个图片 */
 .star-image { 
     position: absolute; 
+    top: 320rpx;
     width: 80rpx; 
     height: 80rpx; 
     src: "../../images/no-star.png"; 
@@ -30,7 +32,7 @@
 /*星星的左边和右边区域<点击左边半个星星，点击右边整个星星> */
 .item { 
     position: absolute; 
-    top: 0rpx; 
+    top: 400rpx; 
     width: 40rpx; 
     height: 80rpx; 
 }
@@ -49,7 +51,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top:20rpx;
+    top:350rpx;
     white-space: nowrap;
 }
 
@@ -89,8 +91,9 @@ textarea{
     font-size: 28rpx;
 }
 .info{
-    border-top: 3rpx solid #666;
-    border-bottom: 3rpx solid #666;
+    margin-top: 20rpx;
+    border-top: 5rpx solid rgba(10, 143, 96, 0.645);
+    border-bottom: 5rpx solid rgba(10, 143, 96, 0.645);
 }
 .detail{
     display: flex;
@@ -110,6 +113,7 @@ textarea{
 }
 
 .time{
+
     font-size: 40rpx;
 }
 

@@ -2,7 +2,7 @@ Page({
 
   data: {
 
-    orderInfoInfo:{
+    orderInfo:{
       "ticket":{
         "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
         "imgsrc":"../../img/orderimg/2.jpg",

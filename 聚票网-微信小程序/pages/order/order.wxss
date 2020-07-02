@@ -57,7 +57,8 @@
 }
 .comment{
     vertical-align: top;
-    line-height: 50rpx;
+    line-height: 80rpx;
     font-size: 30rpx;
+    background-color: rgba(130, 242, 199, 0.337);
 }
 
