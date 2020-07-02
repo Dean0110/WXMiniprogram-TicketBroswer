@@ -6,7 +6,7 @@
             <text class="ordernumber">订单编号：{{item.orderNumber}}</text>
         </view>
         <navigator class="info"  url="../orderDetail/orderDetail">
-            <text class="title">{{item.ticket.title}}</text>
+            <text class="title">{{item.ticket.name}}</text>
             <view class="detail">
                 <view class="img">
                     <image src="{{item.ticket.imgsrc}}"  mode="widthFix"/>

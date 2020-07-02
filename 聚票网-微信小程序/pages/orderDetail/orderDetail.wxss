@@ -5,7 +5,7 @@
     height: 300rpx;
 }
 
-.Title,.Time,.Ordernumber,.Ordertime,.Orderstatus,.Ordertotalprice{
+.Title,.Time,.Ordernumber,.Ordertime,.Orderstatus,.Ordertotalprice,.Orderticketamount{
     padding: 30rpx;
     height:50rpx;
     display: flex;

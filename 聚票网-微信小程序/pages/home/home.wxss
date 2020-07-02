@@ -21,7 +21,7 @@
 .title_info image{
   width: 63rpx;
   height: 63rpx;
-  margin-right: 30rpx;
+  margin: auto;
 }
 
 .title_info {
@@ -30,9 +30,13 @@
   justify-content: start;
 }
 
+.title-more{
+  margin: auto;
+  margin-left: 30rpx; 
+  border: 3rpx none #aaa;
+}
+
 .searchPage{
-  margin-right: 10rpx;
-  margin-left: 50rpx;
   width: max-content;
   border: 5rpx solid #666;
   border-radius: 30rpx;

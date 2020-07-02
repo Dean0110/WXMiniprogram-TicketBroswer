@@ -8,7 +8,7 @@ Page({
     orderList:[
       {
         "ticket":{
-          "title":"2019林俊杰[圣所]世界巡回演唱会",
+          "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
           "imgsrc":"../../img/orderimg/2.jpg",
           "ticketPrice":380
         },
