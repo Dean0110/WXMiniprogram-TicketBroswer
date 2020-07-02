@@ -1,1 +1,124 @@
 /* pages/comment/comment.wxss */
+/*评价区域 */
+.evaluate_item { 
+    position: absolute;
+    top:100rpx;
+    left:-20rpx;
+ }
+
+/*评价标题 */
+.evaluate_title { 
+    color: red;
+}
+
+/*评价盒子 */
+.evaluate_box {
+    position: absolute;
+    left: 220rpx;
+    width: 100%; 
+    display: inline-block;
+}
+
+/*星星评价的每个图片 */
+.star-image { 
+    position: absolute; 
+    width: 80rpx; 
+    height: 80rpx; 
+    src: "../../images/no-star.png"; 
+}
+
+/*星星的左边和右边区域<点击左边半个星星，点击右边整个星星> */
+.item { 
+    position: absolute; 
+    top: 0rpx; 
+    width: 40rpx; 
+    height: 80rpx; 
+}
+
+/*按钮 */
+.submit_button {
+    position: fixed;
+    height: 60rpx;
+    font-size: 30rpx; 
+    line-height: 60rpx;
+    bottom:66rpx;
+    right:66rpx;
+}
+
+.warning{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top:20rpx;
+    white-space: nowrap;
+}
+
+.warning text{
+    background-color: rgb(247, 217, 139);
+    font-size: 30rpx;
+    color: rgb(255, 162, 0);
+    border:3rpx solid rgb(228, 215, 215);
+    border-radius: 30rpx;
+}
+
+textarea{
+    margin-top:33rpx;
+    word-wrap: wrap;
+    font-size: 36rpx;
+    height:400rpx;
+    border: 2rpx solid rgb(240, 238, 238);
+    border-radius: 30rpx;
+    background-color:rgb(240, 238, 238);
+}
+/*新增*/
+
+.order_wrap{
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.status{
+    background-color: green;
+    color:white;
+}
+
+.number{
+    font-size: 28rpx;
+}
+.info{
+    border-top: 3rpx solid #666;
+    border-bottom: 3rpx solid #666;
+}
+.detail{
+    display: flex;
+    justify-content: space-between;
+}
+.detail .img{
+    flex:3;
+}
+.img image{
+    width: 90%;
+    height: 50%;
+}
+.detailInfo{
+    flex:7;
+    display: flex;
+    flex-direction: column;
+}
+
+.time{
+    font-size: 40rpx;
+}
+
+.bottomInfo{
+    display: flex;
+    justify-content:space-between;
+    
+}
+.totalprice{
+    color: red;
+    font-weight: bold;
+}

@@ -1,6 +1,6 @@
 /* pages/order/order.wxss */
 .order_wrap{
-
+    position: relative;
 }
 .header{
     display: flex;
@@ -41,8 +41,23 @@
     font-size: 40rpx;
 }
 
+.bottomInfo{
+    display: flex;
+    justify-content:space-between;
+    
+}
 .totalprice{
     color: red;
     font-weight: bold;
+}
+.bottomButton{
+    display: flex;
+    justify-content: end;
+    margin-right: 20rpx;
+}
+.comment{
+    vertical-align: top;
+    line-height: 50rpx;
+    font-size: 30rpx;
 }
 
