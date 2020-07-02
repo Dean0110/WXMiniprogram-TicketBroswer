@@ -2,7 +2,7 @@
 /*评价区域 */
 .evaluate_item { 
     position: absolute;
-    top:100rpx;
+    top:450rpx;
     left:-20rpx;
  }
 
@@ -49,7 +49,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top:20rpx;
+    top:350rpx;
     white-space: nowrap;
 }
 
@@ -62,11 +62,57 @@
 }
 
 textarea{
-    margin-top:33rpx;
+    position: absolute;
+    top:600rpx;
+    left: 20rpx;
+    /* margin-top:33rpx; */
     word-wrap: wrap;
     font-size: 36rpx;
-    height:750rpx;
+    height:400rpx;
     border: 2rpx solid rgb(240, 238, 238);
     border-radius: 30rpx;
     background-color:rgb(240, 238, 238);
 }
+
+/* new */
+.order_wrap{
+    width:100%;
+    position: absolute;
+    top:10rpx;
+    left:0rpx;
+}
+
+.number{
+    font-size: 28rpx;
+}
+.info{
+    border-top: 3rpx solid #666;
+    border-bottom: 3rpx solid #666;
+}
+.detail{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 3rpx solid #666;
+}
+.detail .img{
+    flex:3;
+}
+.img image{
+    width: 90%;
+    height: 50%;
+}
+.detailInfo{
+    flex:7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.detailInfo text{
+    font-size: 36rpx;
+}
+
+
+
+
+

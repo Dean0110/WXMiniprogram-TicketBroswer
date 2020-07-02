@@ -7,7 +7,21 @@ Page({
     selectedSrc: '../../img/icon/full-star.png',
     halfSrc: '../../img/icon/half-star.png',
     score: 0,
-    scores: [0]
+    scores: [0],
+    orderList:[
+      {
+        "ticket":{
+          "title":"2019林俊杰[圣所]世界巡回演唱会",
+          "imgsrc":"../../img/orderimg/2.jpg",
+          "ticketPrice":380
+        },
+        "orderStatus":"交易成功",
+        "orderNumber":"24592077",
+        "startTime":"时间：2018.12.28 10:01:23",
+        "ticketAmount":1,
+        "totalPrice":380
+      }
+    ]
   },
 
   // 提交事件

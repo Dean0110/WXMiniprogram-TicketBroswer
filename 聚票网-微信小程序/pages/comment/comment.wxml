@@ -1,5 +1,19 @@
 
 <view class='container'> 
+    <view wx:for="{{orderList}}" wx:key="{{item}}">
+    <view class="order_wrap">
+            <view class="detail">
+                <view class="img">
+                    <image src="{{item.ticket.imgsrc}}"  mode="widthFix"/>
+                </view>
+                <view class="detailInfo">
+                    <text class="title">{{item.ticket.title}}</text>
+                    <text class="time">{{item.startTime}}</text>
+                              
+                </view>
+            </view>
+    </view>
+    </view>
     <view class="warning">
         <text >为确保公正有效，非真实评价及作弊评价均不计入评分</text>
     </view>
