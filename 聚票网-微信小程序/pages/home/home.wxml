@@ -1,10 +1,10 @@
 <view class="main">
 <view class="title_info">
+    <image class="title-more" src="../../img/icon/更多.png"></image>
     <navigator url="../searchPage/searchPage">
         <input class="searchPage" placeholder="                 搜索" placeholder-class="input-hint"></input>
     </navigator>
     <image src="../../img/icon/搜索.png"></image>
-    <image style="margin-left: 80rpx; border: 3rpx none #aaa" src="../../img/icon/更多.png"></image>
 </view>
 <view class="nav_wrap">
     <scroll-view class="nav" scroll-x> 
@@ -52,7 +52,7 @@
                 <text class="title">{{item.title}}</text>
                 <text>{{item.date}}</text>
                 <text>{{item.place}}</text>
-                <text class="price">{{item.price}}起</text>
+                <text class="price">￥{{item.price}}起</text>
             </view>
         </view>
     </view>

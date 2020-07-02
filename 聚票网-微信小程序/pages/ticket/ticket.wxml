@@ -2,22 +2,22 @@
 <view class="ticket">
     <view class="top">
         <view class="img">
-            <image mode="widthFix" src="../../img/recommend/6.jpg" />
+            <image mode="widthFix" src="{{ticketDetail.ticket.imgsrc}}" />
         </view>
         <view class="title">
-            <text class="theme">【西安】曹轩宾2020[我]全国巡回演唱会 西安站</text>
-            <text class="price">150元</text>
+            <text class="theme">{{ticketDetail.ticket.name}}</text>
+            <text class="price">￥{{ticketDetail.ticket.ticketPrice}}</text>
         </view>
     </view>
 
     <view class="main">
         <view class="time">
-            <text class="dateTime">2020.10.16 20:30</text>
-            <text class="desc">约90分钟，仅供参考，最终以现场实际时长为准</text>
+            <text class="dateTime">{{ticketDetail.time.date}} {{ticketDetail.time.time}}</text>
+            <text class="desc">{{ticketDetail.time.describe}}</text>
         </view>
         <view class="place">
-            <text class="housename">西安市|MAO Livehouse西安</text>
-            <text class="location">雁翔路3369号曲江创意谷文化产业园地内</text>
+            <text class="housename">{{ticketDetail.place.city}}|{{ticketDetail.place.houseName}}</text>
+            <text class="location">{{ticketDetail.place.location}}</text>
         </view>
         <view class="merchant">
             <view class="img">
@@ -40,17 +40,16 @@
             <button class="purchase">立即购买</button>
         </view>
 
-        <!-- 新增 -->
         <view class="detailinfo">
             <text >音乐人 曹轩宾，2020开启全新音乐旅程，[我]全国巡回演唱会正式启动</text>
             <text >"我"是曹轩宾音乐和人生哲思不断进化的总结</text>
-            <image mode="scaleToFill" src="../../img/recommend/6.1.png" />
+            <image mode="scaleToFill" src="../../img/ticketImage/ticketIntro/6.1.png" />
             <text >不争</text>
             <text >不抢</text>
             <text >不卑</text>
             <text >不亢</text>
             <text >如"我"</text>
-            <image mode="scaleToFill" src="../../img/recommend/6.2.png" />
+            <image mode="scaleToFill" src="../../img/ticketImage/ticketIntro/6.2.png" />
         </view>
     </view>
 </view>

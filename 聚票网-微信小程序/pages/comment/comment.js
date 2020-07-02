@@ -1,6 +1,25 @@
 Page({
 
   data: {
+
+    orderInfo:{
+      "ticket":{
+        "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
+        "imgsrc":"../../img/orderimg/2.jpg",
+        "ticketPrice":380
+      },
+      "playTime":"2019-04-13 19:30",
+      "orderID":"24592077",
+      "orderTime":"2018.12.28 10:01:23",
+      "orderStatus":"支付成功",
+      "ticketAmount":"1",
+      "orderTotalPrice":"380.00",
+      "sendApproach":"快递",
+      "sendID":"2459207711",
+      "sendAddress":"重庆市沙坪坝区重庆大学虎溪校区"
+    },
+  
+
     evaluate_contant:['评价条目一'],
     stars: [0, 1, 2, 3, 4],
     normalSrc: '../../img/icon/no-star.png',

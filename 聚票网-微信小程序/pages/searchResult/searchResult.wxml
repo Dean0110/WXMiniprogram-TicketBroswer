@@ -1,7 +1,7 @@
 <view class="searchResult">
     <view class="title">
         <input placeholder="搜索" />
-        <text >取消</text>
+        <text style="margin: auto">取消</text>
     </view>
     <view class="list">
     <navigator class="info" wx:for="{{detailList}}" wx:key="{{index}}" url="../ticket/ticket">

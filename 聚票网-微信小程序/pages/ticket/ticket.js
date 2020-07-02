@@ -5,7 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    ticketDetail:{
+      "ticket":{
+        "name":"曹轩宾2020[我]全国巡回演唱会 西安站",
+        "imgsrc":"../../img/ticketImage/6.jpg",
+        "ticketPrice":150
+      },
+      "time":{
+        "date":"2020.10.16",
+        "time":"20:30",
+        "describe":"约90分钟，仅供参考，最终以现场实际时长为准"
+      },
+      "place":{
+        "city":"西安市",
+        "houseName":"MAO Livehouse西安",
+        "location":"雁翔路3369号曲江创意谷文化产业园地内"
+      }
+    }
   },
 
   /**

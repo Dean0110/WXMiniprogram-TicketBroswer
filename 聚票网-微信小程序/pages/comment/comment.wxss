@@ -54,7 +54,7 @@
 }
 
 .warning text{
-    background-color: rgb(247, 200, 139);
+    background-color: rgb(247, 217, 139);
     font-size: 30rpx;
     color: red;
     border:3rpx solid rgb(228, 215, 215);

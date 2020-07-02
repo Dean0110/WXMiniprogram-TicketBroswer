@@ -2,20 +2,17 @@
 <view class="searchPage">
     <view class="top">
         <navigator url="../searchResult/searchResult" >
-        <input placeholder="输入商家、明星、演出关键词" />
+            <input placeholder="输入商家、明星、演出关键词" />
         </navigator>
-        <text >取消</text>
+        <image src="../../img/icon/搜索.png"></image>
     </view>
     <view class="history">
         <view class="historyTitle">
             <text >历史搜索：</text>
         </view>
         <view class="historyBody">
-            <view>
-                <text >曹轩宾</text>
-            </view>
-            <view>
-                <text >周杰伦</text>
+            <view wx:for="{{searchHistory}}" wx:key="{{index}}">
+                <text >{{item}}</text>
             </view>
         </view>
     <view class="hot">
@@ -23,21 +20,9 @@
             <text >热门搜索：</text>
         </view>
         <view class="hotBody">
-            <view>
-                <text >周杰伦</text>
-            </view>
-            <view>
-                <text >开心麻花</text>
-            </view>
-            <view>
-                <text >邓紫棋</text>
-            </view>
-            <view>
-                <text >林俊杰</text>
-            </view>
-            <view>
-                <text >许嵩</text>
-            </view>  
+            <view wx:for="{{searchRecommend}}" wx:key="{{index}}">
+                <text >{{item}}</text>
+            </view> 
         </view>
     </view>
     </view>
