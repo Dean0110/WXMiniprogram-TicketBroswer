@@ -9,7 +9,7 @@
     <input id="newAddress" type="text" placeholder="请输入新地址"></input>
   </view>
   
-  <image mode="widthFix" bindtap="submitAddress" src="../../img/icon/提交.png"></image>
+  <image mode="widthFix" bindtap="submitAddress" src="../../img/icon/tijiao.png"></image>
   
 </view>
 
