@@ -19,9 +19,9 @@
                     <view class="bottomInfo">
                         <text class="totalprice">总价：￥{{item.totalPrice}}</text>
                         <view class="bottomButton">
-                            <navigator url="../comment/comment">
-                                <button class="comment" size="default" style="height:80rpx;">评价订单</button>
-                            </navigator>
+                            <!-- <navigator url="../comment/comment" hover-stop-propagation="{{true}}" > -->
+                                <button class="comment" size="mini" catchtap="change" style="height:80rpx;">评价订单</button>
+                            <!-- </navigator> -->
                         </view>
                     </view>
                 </view>
