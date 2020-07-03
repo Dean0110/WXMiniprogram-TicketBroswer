@@ -1,60 +1,68 @@
 <view class="main">
-<view class="title_info">
-    <image class="title-more" src="../../img/icon/gengduo.png"></image>
-    <navigator url="../searchPage/searchPage">
-        <input class="searchPage" placeholder="                 搜索" placeholder-class="input-hint"></input>
-    </navigator>
-    <image src="../../img/icon/sousuo.png"></image>
-</view>
-<view class="nav_wrap">
-    <scroll-view class="nav" scroll-x> 
-        <navigator >
-        <view  bindtap="activeNav" data-index="{{index}}"
-         class="nav_item {{index===currindexNav?'active':''}}"
-        wx:for="{{mynavList}}" wx:key="{{index}}">
-            {{item.text}}
-        </view>
-        </navigator>
-    </scroll-view>
-</view>
 
-<view class="slides">
-    <swiper autoplay indicator-dots interval="3000" circular="{{true}}">
-        <swiper-item wx:for="{{myswiperList}}" wx:key="{{index}}">
-            <navigator >
-                <image mode="scaleToFill" src="{{item.imgSrc}}"/>
-            </navigator>
-        </swiper-item>
-    </swiper>
-</view>
-
-<view class="rc">
-    <text >推荐</text>
- <scroll-view class="recommend" scroll-x> 
-    <view  class="recommend_item" 
-        wx:for="{{recommendList}}" wx:key="{{index}}">
-        <image mode="widthFix" src="{{item.imgSrc}}" />
-        <text >{{item.kind}}</text>
+    <view class="title_info">
+        <image class="title-more" src="../../img/icon/更多.png" bindtap="showMore"></image>
+        <input bindtap="searchNavigateTo" class="searchPage" placeholder="                 搜索" placeholder-class="input-hint"></input>
+        <image src="../../img/icon/sousuo.png"></image>
     </view>
- </scroll-view>
-</view>
-</view>
 
- <view>
-    <text style="margin:10rpx;color:black;font-size:40rpx;font-weight:bold;">更多</text>
-    <view class="more">
-        <view class="more_item" wx:for="{{moreList}}" wx:key="{{index}}">
-            <view class="img">
+    <view style="display:{{showMoreView?'flex':'none'}}">
+            <view class="more_view" bindtap="hideMore" catchtouchmove="true">
+            </view>
+            <view class="more_content">
+                <text bindtap="turnToMerchant">商家登录</text>
+                <text bindtap="turnToManager">管理员登录</text>
+            </view>
+    </view>
+
+    <view class="nav_wrap">
+        <scroll-view class="nav" scroll-x> 
+            <view  bindtap="activeNav" data-index="{{index}}"
+            class="nav_item {{index===currindexNav?'active':''}}"
+            wx:for="{{mynavList}}" wx:key="{{index}}">
+                {{item.text}}
+            </view>
+        </scroll-view>
+    </view>
+
+    <view class="slides">
+        <swiper autoplay indicator-dots interval="3000" circular="{{true}}">
+            <swiper-item wx:for="{{myswiperList}}" wx:key="{{index}}">
+                <navigator >
+                    <image mode="scaleToFill" src="{{item.imgSrc}}"/>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+
+    <view class="rc">
+        <text >推荐</text>
+        <scroll-view class="recommend" scroll-x> 
+            <view  class="recommend_item" 
+                wx:for="{{recommendList}}" wx:key="{{index}}">
                 <image mode="widthFix" src="{{item.imgSrc}}" />
-                <text>{{item.kind}}</text>
+                <text >{{item.kind}}</text>
             </view>
-            <view class="information">
-                <text class="title">{{item.title}}</text>
-                <text>{{item.date}}</text>
-                <text>{{item.place}}</text>
-                <text class="price">￥{{item.price}}起</text>
+        </scroll-view>
+    </view>
+
+
+    <view>
+        <text style="margin:10rpx;color:black;font-size:40rpx;font-weight:bold;">更多</text>
+        <view class="more">
+            <view class="more_item" wx:for="{{moreList}}" wx:key="{{index}}">
+                <view class="img">
+                    <image mode="widthFix" src="{{item.imgSrc}}" />
+                    <text>{{item.kind}}</text>
+                </view>
+                <view class="information">
+                    <text class="title">{{item.title}}</text>
+                    <text>{{item.date}}</text>
+                    <text>{{item.place}}</text>
+                    <text class="price">￥{{item.price}}起</text>
+                </view>
             </view>
         </view>
     </view>
-</view>
 
+</view>
