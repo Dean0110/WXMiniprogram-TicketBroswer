@@ -87,13 +87,14 @@ textarea{
     font-size: 28rpx;
 }
 .info{
-    border-top: 3rpx solid #666;
-    border-bottom: 3rpx solid #666;
+    border-top: 5rpx solid rgba(37, 245, 190, 0.392);
+    border-bottom: 5rpx solid rgba(37, 245, 190, 0.392);
 }
 .detail{
     display: flex;
     justify-content: space-around;
-    border-bottom: 3rpx solid #666;
+    border-top: 5rpx solid rgba(37, 245, 190, 0.392);
+    border-bottom: 5rpx solid rgba(37, 245, 190, 0.392);
 }
 .detail .img{
     flex:3;

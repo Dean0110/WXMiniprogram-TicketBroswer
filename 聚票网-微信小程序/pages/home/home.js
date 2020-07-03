@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showMoreView:false,
+    
     currindexNav:0,
     mynavList:[
       {"text":"演唱会","id":0},
@@ -57,6 +59,36 @@ Page({
        "kind":"展览休闲",
        "price":"35"}
     ]
+  },
+
+  showMore(){
+    this.setData({
+      showMoreView:!this.data.showMoreView
+    })
+  },
+
+  hideMore(){
+    this.setData({
+      showMoreView:false
+    })
+  },
+
+  turnToMerchant(){
+    wx.navigateTo({
+      url:'../merchantLogin/merchantLogin'
+    })
+  },
+
+  turnToManager(){
+    wx.navigateTo({
+      url:'../managerLogin/managerLogin'
+    })
+  },
+
+  searchNavigateTo(){
+    wx.navigateTo({
+      url: '../searchPage/searchPage',
+    })
   },
 
   activeNav(e){
