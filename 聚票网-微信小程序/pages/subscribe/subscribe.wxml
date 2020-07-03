@@ -3,7 +3,7 @@
     <view class="subscribe_item" 
     wx:for="{{subscribeList}}" wx:key="{{index}}">
         <view class="img">
-            <image mode="widthFix" src="{{item.imgSrc}}" />
+            <image mode="widthFix" src="{{item.imgSrc}}"/>
         </view>
         <view class="info">
             <text class="name">{{item.name}}</text>

@@ -8,7 +8,7 @@ Page({
     ticketDetail:{
       "ticket":{
         "name":"曹轩宾2020[我]全国巡回演唱会 西安站",
-        "imgsrc":"../../img/ticketImage/6.jpg",
+        "imgsrc":"../../img/TicketImage/6.jpg",
         "ticketPrice":150
       },
       "time":{

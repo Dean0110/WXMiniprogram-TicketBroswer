@@ -7,15 +7,15 @@ Page({
   data: {
     subscribeList:[
     { "name":"林俊杰",
-      "imgSrc":"../../img/subscribe/林俊杰.jpg",
+      "imgSrc":"../../img/subscribe/linjunjie.jpg",
       "number":4
     },
     { "name":"周杰伦",
-      "imgSrc":"../../img/subscribe/周杰伦.jpg",
+      "imgSrc":"../../img/subscribe/zhoujielun.jpg",
       "number":5
     },
     { "name":"刘德华",
-      "imgSrc":"../../img/subscribe/刘德华.jpg",
+      "imgSrc":"../../img/subscribe/liudehua.jpg",
       "number":2
     }
   ]

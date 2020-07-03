@@ -1,10 +1,10 @@
 <view class="main">
 <view class="title_info">
-    <image class="title-more" src="../../img/icon/更多.png"></image>
+    <image class="title-more" src="../../img/icon/gengduo.png"></image>
     <navigator url="../searchPage/searchPage">
         <input class="searchPage" placeholder="                 搜索" placeholder-class="input-hint"></input>
     </navigator>
-    <image src="../../img/icon/搜索.png"></image>
+    <image src="../../img/icon/sousuo.png"></image>
 </view>
 <view class="nav_wrap">
     <scroll-view class="nav" scroll-x> 
