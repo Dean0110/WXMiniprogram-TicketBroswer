@@ -21,7 +21,7 @@
         </view>
         <view class="merchant">
             <view class="img">
-                <image mode="widthFix" src="../../img/icon/购票人.png"></image>
+                <image mode="widthFix" src="../../img/icon/goupiaoren.png"></image>
             </view>
             <view class="info">
                 <text class="name">商家名</text>
@@ -43,13 +43,13 @@
         <view class="detailinfo">
             <text >音乐人 曹轩宾，2020开启全新音乐旅程，[我]全国巡回演唱会正式启动</text>
             <text >"我"是曹轩宾音乐和人生哲思不断进化的总结</text>
-            <image mode="scaleToFill" src="../../img/ticketImage/ticketIntro/6.1.png" />
+            <image mode="scaleToFill" src="../../img/TicketImage/ticketIntro/6.1.png" />
             <text >不争</text>
             <text >不抢</text>
             <text >不卑</text>
             <text >不亢</text>
             <text >如"我"</text>
-            <image mode="scaleToFill" src="../../img/ticketImage/ticketIntro/6.2.png" />
+            <image mode="scaleToFill" src="../../img/TicketImage/ticketIntro/6.2.png" />
         </view>
     </view>
 </view>

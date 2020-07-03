@@ -4,7 +4,7 @@
         <navigator url="../searchResult/searchResult" >
             <input placeholder="输入商家、明星、演出关键词" />
         </navigator>
-        <image src="../../img/icon/搜索.png"></image>
+        <image src="../../img/icon/sousuo.png"></image>
     </view>
     <view class="history">
         <view class="historyTitle">
