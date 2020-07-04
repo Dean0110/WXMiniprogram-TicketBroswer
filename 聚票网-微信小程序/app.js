@@ -35,5 +35,13 @@ App({
   },
   globalData: {
     userInfo: null
+  },
+  data:{
+    searchHistory:[
+      "曹轩宾","周杰伦"
+    ],
+    searchRecommend:[
+      "周杰伦","开心麻花","邓紫棋","林俊杰","许嵩"
+    ]
   }
 })

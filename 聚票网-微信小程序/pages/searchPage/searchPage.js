@@ -1,4 +1,5 @@
 // pages/searchPage/searchPage.js
+const app=getApp()
 Page({
 
   /**
@@ -7,12 +8,9 @@ Page({
   data: {
     searchContent:"",
 
-    searchHistory:[
-      "曹轩宾","周杰伦"
-    ],
-    searchRecommend:[
-      "周杰伦","开心麻花","邓紫棋","林俊杰","许嵩"
-    ]
+    searchHistory:null,
+      
+    searchRecommend:null,
   },
 
   bindInput:function(e){
@@ -22,6 +20,8 @@ Page({
   },
 
   search(){
+    app.data.searchHistory.push(this.data.searchContent);
+    console.log(app.data.searchHistory);
     wx.navigateTo({
       url: '../searchResult/searchResult?search_content='+this.data.searchContent,
     })
@@ -45,13 +45,18 @@ Page({
     this.search()
   },
 
-
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      searchHistory:app.data.searchHistory
+      
+    });
+    this.setData({
+      searchRecommend:app.data.searchRecommend
+    })
+    
   },
 
   /**

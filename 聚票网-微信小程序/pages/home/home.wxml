@@ -40,8 +40,8 @@
         <scroll-view class="recommend" scroll-x> 
             <view  class="recommend_item" 
                 wx:for="{{recommendList}}" wx:key="{{index}}">
-                <image mode="widthFix" src="{{item.imgSrc}}" />
-                <text >{{item.kind}}</text>
+                <image mode="widthFix" src="{{item.img}}" />
+                <text >{{item.people}}</text>
             </view>
         </scroll-view>
     </view>
@@ -50,18 +50,18 @@
     <view>
         <text style="margin:10rpx;color:black;font-size:40rpx;font-weight:bold;">更多</text>
         <view class="more">
-            <view class="more_item" wx:for="{{moreList}}" wx:key="{{index}}">
+             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}">
                 <view class="img">
-                    <image mode="widthFix" src="{{item.imgSrc}}" />
-                    <text>{{item.kind}}</text>
+                    <image mode="widthFix" src="{{item.img}}" />
+                    <text>{{item.people}}</text>
                 </view>
                 <view class="information">
-                    <text class="title">{{item.title}}</text>
-                    <text>{{item.date}}</text>
-                    <text>{{item.place}}</text>
+                    <text class="title">{{item.name}}</text>
+                    <text>{{item.beginDate}}</text>
+                    <text>{{item.address}}</text>
                     <text class="price">￥{{item.price}}起</text>
                 </view>
-            </view>
+            </navigator>
         </view>
     </view>
 

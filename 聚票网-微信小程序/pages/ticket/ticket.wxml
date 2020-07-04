@@ -2,22 +2,22 @@
 <view class="ticket">
     <view class="top">
         <view class="img">
-            <image mode="widthFix" src="{{ticketDetail.ticket.imgsrc}}" />
+            <image mode="widthFix" src="{{ticketInfo.img}}" />
         </view>
         <view class="title">
-            <text class="theme">{{ticketDetail.ticket.name}}</text>
-            <text class="price">￥{{ticketDetail.ticket.ticketPrice}}</text>
+            <text class="theme">{{ticketInfo.name}}</text>
+            <text class="price">￥{{ticketInfo.price}}</text>
         </view>
     </view>
 
     <view class="main">
         <view class="time">
-            <text class="dateTime">{{ticketDetail.time.date}} {{ticketDetail.time.time}}</text>
-            <text class="desc">{{ticketDetail.time.describe}}</text>
+            <text class="dateTime">{{ticketInfo.beginTime}}</text>
+            <text class="desc">{{ticketInfo.endTime}}</text>
         </view>
         <view class="place">
-            <text class="housename">{{ticketDetail.place.city}}|{{ticketDetail.place.houseName}}</text>
-            <text class="location">{{ticketDetail.place.location}}</text>
+            <text class="housename">{{ticketInfo.address}}</text>
+            <text class="location">{{ticketInfo.address}}</text>
         </view>
         <view class="merchant">
             <view class="img">
@@ -37,19 +37,19 @@
         
         <view class="bottomB">  
             <button class="share">分享</button>
-            <button class="purchase" bindtap="addOrder">立即购买</button>
+            <button class="purchase">立即购买</button>
         </view>
 
         <view class="detailinfo">
             <text >音乐人 曹轩宾，2020开启全新音乐旅程，[我]全国巡回演唱会正式启动</text>
             <text >"我"是曹轩宾音乐和人生哲思不断进化的总结</text>
-            <image mode="scaleToFill" src="../../img/TicketImage/ticketIntro/6.1.png" />
+            <image mode="scaleToFill" src="{{ticketInfo.img}}" />
             <text >不争</text>
             <text >不抢</text>
             <text >不卑</text>
             <text >不亢</text>
             <text >如"我"</text>
-            <image mode="scaleToFill" src="../../img/TicketImage/ticketIntro/6.2.png" />
+            <image mode="scaleToFill" src="{{ticketInfo.img}}" />
         </view>
     </view>
 </view>

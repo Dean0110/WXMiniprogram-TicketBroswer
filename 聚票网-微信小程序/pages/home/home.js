@@ -6,7 +6,6 @@ Page({
    */
   data: {
     showMoreView:false,
-    
     currindexNav:0,
     mynavList:[
       {"text":"演唱会","id":0},
@@ -21,44 +20,8 @@ Page({
       {"imgSrc":"../../img/sliderImage/6.jpg"},
       {"imgSrc":"../../img/sliderImage/7.jpg"}
     ],
-    recommendList:[
-      {"imgSrc":"../../img/recommend/6.jpg",
-       "kind":"演唱会",
-       "price":"150"},
-      {"imgSrc":"../../img/recommend/2.jpg",
-       "kind":"话剧歌剧",
-       "price":"100"},
-      {"imgSrc":"../../img/recommend/3.jpg",
-       "kind":"展览休闲",
-       "price":"35"},
-      {"imgSrc":"../../img/recommend/4.jpg",
-       "kind":"话剧歌剧",
-       "price":"380"},
-      {"imgSrc":"../../img/recommend/5.jpg",
-       "kind":"儿童亲子",
-       "price":"100"},
-    ],
-
-  moreList:[
-      {"imgSrc":"../../img/recommend/1.jpg",
-      "title":"扯馆儿喜剧专场———寅派动力",
-      "date":"2020.07.02-07.05",
-      "place":"重庆|寅派动力",
-       "kind":"曲苑杂坛",
-       "price":"80"},
-      {"imgSrc":"../../img/recommend/2.jpg",
-      "title":"开心麻花爆笑舞台剧《乌龙山伯爵》",
-      "date":"2020.07.10-07.12",
-      "place":"重庆|重庆文化宫大剧院",
-       "kind":"话剧歌剧",
-       "price":"100"},
-      {"imgSrc":"../../img/recommend/3.jpg",
-      "title":"《重逢岛》新媒体艺术展",
-      "date":"2020.06.06-08.16",
-      "place":"重庆|原美术馆",
-       "kind":"展览休闲",
-       "price":"35"}
-    ]
+    recommendList:null,
+    moreList:null,
   },
 
   showMore(){
@@ -100,7 +63,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/ticket/all',
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+          that.setData({
+            recommendList:res.data.data
+          }),
+          that.setData({
+            moreList:res.data.data
+          })
+        }
+      }
+    })
   },
 
   /**

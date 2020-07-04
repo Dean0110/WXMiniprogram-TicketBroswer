@@ -1,17 +1,17 @@
 <view class="searchResult">
     <view class="title">
         <input type="text" value="{{searchContent}}"></input>
-        <text style="margin: auto">取消</text>
+        <text bindtap="back" style="margin: auto">取消</text>
     </view>
     <view class="list">
-    <navigator class="info" wx:for="{{detailList}}" wx:key="{{index}}" url="../ticket/ticket">
+    <navigator class="info" wx:for="{{ticketInfoList}}" wx:key="{{index}}" url="../ticket/ticket?id={{item.id}}">
         <view class="img">
-            <image src="{{item.imgSrc}}" mode="widthFix" />
+            <image src="{{item.img}}" mode="widthFix" />
         </view>
         <view class="detail" url="../ticket/ticket">
-            <text class="Title">{{item.title}}</text>
-            <text class="date">{{item.dateTime}}</text>
-            <text class="place">{{item.place}}</text>
+            <text class="Title">{{item.name}}</text>
+            <text class="date">{{item.beginTime}}</text>
+            <text class="place">{{item.address}}</text>
             <text >\n</text>
             <text class="price">{{item.price}}</text>
         </view>
