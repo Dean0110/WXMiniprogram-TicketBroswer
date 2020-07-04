@@ -1,2 +1,8 @@
 <!--pages/managerLogin/managerLogin.wxml-->
-<text>pages/managerLogin/managerLogin.wxml</text>
+
+<view class="managerLogin">
+  <text>管理员登录</text>
+  <input id="login-managerID" type="number" placeholder="请输入登录账户"></input>
+  <input id="login-managerPswd" type="number" placeholder="请输入登录密码"></input>
+  <button id="login-managerBtn">登录</button>
+</view>

@@ -37,7 +37,7 @@
         
         <view class="bottomB">  
             <button class="share">分享</button>
-            <button class="purchase">立即购买</button>
+            <button class="purchase" bindtap="addOrder">立即购买</button>
         </view>
 
         <view class="detailinfo">

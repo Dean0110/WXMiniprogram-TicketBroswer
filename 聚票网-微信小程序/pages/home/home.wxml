@@ -3,7 +3,7 @@
     <view class="title_info">
         <image class="title-more" src="../../img/icon/gengduo.png" bindtap="showMore"></image>
         <input bindtap="searchNavigateTo" class="searchPage" placeholder="                 搜索" placeholder-class="input-hint"></input>
-        <image src="../../img/icon/sousuo.png"></image>
+        <image bindtap="searchNavigateTo" src="../../img/icon/sousuo.png"></image>
     </view>
 
     <view style="display:{{showMoreView?'flex':'none'}}">
