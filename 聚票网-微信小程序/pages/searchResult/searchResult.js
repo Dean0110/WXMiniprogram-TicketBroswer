@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    searchContent:'',
     detailList:[
     {
         "imgSrc":"../../img/recommend/6.jpg",
@@ -41,7 +42,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      searchContent:options.search_content
+    })
+    console.log(this.data.searchContent)
   },
 
   /**

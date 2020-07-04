@@ -17,7 +17,7 @@ Page({
         "startTime":"时间：2018.12.28 10:01:23",
         "ticketAmount":1,
         "totalPrice":380
-      }
+      },
     ]
   },
 

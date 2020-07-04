@@ -1,6 +1,6 @@
 <view class="searchResult">
     <view class="title">
-        <input placeholder="搜索" />
+        <input type="text" value="{{searchContent}}"></input>
         <text style="margin: auto">取消</text>
     </view>
     <view class="list">

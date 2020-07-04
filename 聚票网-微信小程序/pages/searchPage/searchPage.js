@@ -15,10 +15,6 @@ Page({
     ]
   },
 
-  search:function(){
-
-  },
-
   bindInput:function(e){
     this.setData({
       searchContent:e.detail.value
@@ -26,9 +22,8 @@ Page({
   },
 
   search(){
-    console.log(this.data.searchContent),
     wx.navigateTo({
-      url: '../searchResult/searchResult',
+      url: '../searchResult/searchResult?search_content='+this.data.searchContent,
     })
   },
 
