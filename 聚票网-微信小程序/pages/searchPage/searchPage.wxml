@@ -1,10 +1,8 @@
 <!--pages/searchPage/searchPage.wxml-->
 <view class="searchPage">
     <view class="top">
-        <navigator url="../searchResult/searchResult" >
-            <input placeholder="输入商家、明星、演出关键词" />
-        </navigator>
-        <image src="../../img/icon/sousuo.png"></image>
+        <input bindinput="bindInput" placeholder="输入商家、明星、演出关键词" />
+        <image bindtap="search" src="../../img/icon/sousuo.png"></image>
     </view>
     <view class="history">
         <view class="historyTitle">
@@ -12,19 +10,19 @@
         </view>
         <view class="historyBody">
             <view wx:for="{{searchHistory}}" wx:key="{{index}}">
-                <text >{{item}}</text>
+                <text bindtap="searchHisTag" data-index="{{index}}">{{item}}</text>
             </view>
         </view>
+    </view>
     <view class="hot">
         <view class="hotTitle">
             <text >热门搜索：</text>
         </view>
         <view class="hotBody">
             <view wx:for="{{searchRecommend}}" wx:key="{{index}}">
-                <text >{{item}}</text>
+                <text bindtap="searchRecTag" data-index="{{index}}">{{item}}</text>
             </view> 
         </view>
-    </view>
     </view>
 </view>
 

@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    searchContent:"",
+
     searchHistory:[
       "曹轩宾","周杰伦"
     ],
@@ -12,6 +14,43 @@ Page({
       "周杰伦","开心麻花","邓紫棋","林俊杰","许嵩"
     ]
   },
+
+  search:function(){
+
+  },
+
+  bindInput:function(e){
+    this.setData({
+      searchContent:e.detail.value
+    })
+  },
+
+  search(){
+    console.log(this.data.searchContent),
+    wx.navigateTo({
+      url: '../searchResult/searchResult',
+    })
+  },
+
+  searchHisTag(e){
+    var index=e.currentTarget.dataset.index
+    var content=this.data.searchHistory[index]
+    this.setData({
+      searchContent:content 
+    }),
+    this.search()
+  },
+
+  searchRecTag(e){
+    var index=e.currentTarget.dataset.index
+    var content=this.data.searchRecommend[index]
+    this.setData({
+      searchContent:content
+    }),
+    this.search()
+  },
+
+
 
   /**
    * 生命周期函数--监听页面加载

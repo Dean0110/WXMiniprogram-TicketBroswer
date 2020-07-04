@@ -21,7 +21,27 @@ Page({
         "houseName":"MAO Livehouse西安",
         "location":"雁翔路3369号曲江创意谷文化产业园地内"
       }
+    },
+
+
+  addOrder(){
+    var order_page=pages[6]
+    order_page.setData({
+      orderList[1]:{
+      "ticket":{
+        "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
+        "imgsrc":"../../img/orderimg/2.jpg",
+        "ticketPrice":380
+      },
+      "orderStatus":"交易成功",
+      "orderNumber":"24592077",
+      "startTime":"时间：2018.12.28 10:01:23",
+      "ticketAmount":1,
+      "totalPrice":380
     }
+  },
+  
+    })
   },
 
   /**
