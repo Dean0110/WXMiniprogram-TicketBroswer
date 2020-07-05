@@ -20,8 +20,18 @@ Page({
   },
 
   search(){
-    app.data.searchHistory.push(this.data.searchContent);
-    console.log(app.data.searchHistory);
+    if(this.data.searchContent!=''){
+      var flag=false;
+      var schistory=app.data.searchHistory;
+      for(var index=0;index<app.data.searchHistory.length;index++){
+        if(this.data.searchContent==schistory[index]){
+          flag=true;
+        }
+      }
+      if(!flag){
+        app.data.searchHistory.push(this.data.searchContent);
+      }
+    }
     wx.navigateTo({
       url: '../searchResult/searchResult?search_content='+this.data.searchContent,
     })

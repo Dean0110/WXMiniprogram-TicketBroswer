@@ -14,8 +14,38 @@ Page({
       url: '../searchPage/searchPage',
     })
   },
+
+  bindInput:function(e){
+    this.setData({
+      searchContent:e.detail.value
+    })
+  },
+
+  search(){
+    this.getTicketByKeyword(this.data.archContent);
+  },
+
   getTicketByKeyword(searchContent){
     let that=this;
+    that.setData({
+      ticketInfoList:null
+    })
+    // 判断是否搜索为空
+    if(this.data.searchContent==''){
+      wx.request({
+        url: 'http://localhost:8080/ticket/all',
+        data:{},
+        success(res){
+          console.log(res);
+          if(res.data.code===200){
+          that.setData({
+            ticketInfoList:res.data.data
+          })
+        }
+       }
+      })
+      return;
+    }
     wx.request({
       url: 'http://localhost:8080/ticket/searchTicket',
       data:{
@@ -38,7 +68,6 @@ Page({
     this.setData({
       searchContent:options.search_content
     })
-    console.log(this.data.searchContent);
     this.getTicketByKeyword(this.data.archContent);
   },
 

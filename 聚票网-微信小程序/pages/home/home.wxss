@@ -188,7 +188,7 @@
 
 .more_content{
   width: 20%;
-  height: 20%;
+  height: 15%;
   background-color:white;
   display: flex;
   align-items: center;
