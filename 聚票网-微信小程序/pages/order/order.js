@@ -5,32 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-    orderList:[
-      {
-        "ticket":{
-          "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
-          "imgsrc":"../../img/orderimg/2.jpg",
-          "ticketPrice":380
-        },
-        "orderStatus":"交易成功",
-        "orderNumber":"24592077",
-        "startTime":"时间：2018.12.28 10:01:23",
-        "ticketAmount":1,
-        "totalPrice":380
-      },
-    ]
+    // orderList:[
+    //   {
+    //     "ticket":{
+    //       "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
+    //       "imgsrc":"../../img/orderimg/2.jpg",
+    //       "ticketPrice":380
+    //     },
+    //     "orderStatus":"交易成功",
+    //     "orderNumber":"24592077",
+    //     "startTime":"时间：2018.12.28 10:01:23",
+    //     "ticketAmount":1,
+    //     "totalPrice":380
+    //   },
+    // ]
+    orderList:null,
   },
 
-  change:function (){
+  change:function(event){
+    
+    let id=event.currentTarget.dataset.index;
+    console.log(id);
     wx.navigateTo({
-      url:'../comment/comment'
+      url: '../comment/comment?id='+id,
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/order/findOrderMsgByUserId',
+      data:{
+        "userId":1,
 
+      },
+      success(res){
+        console.log(res);
+        that.setData({
+          orderList:res.data.data
+        })
+      }
+    })
   },
 
   /**

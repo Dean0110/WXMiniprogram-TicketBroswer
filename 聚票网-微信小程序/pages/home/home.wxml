@@ -38,11 +38,13 @@
     <view class="rc">
         <text >推荐</text>
         <scroll-view class="recommend" scroll-x> 
-            <view  class="recommend_item" 
+            <navigator url="../ticket/ticket?id={{item.id}}" class="recommend_item" 
                 wx:for="{{recommendList}}" wx:key="{{index}}">
+                <view wx:if="{{index<5}}">
                 <image mode="widthFix" src="{{item.img}}" />
                 <text >{{item.people}}</text>
-            </view>
+                </view>
+            </navigator>
         </scroll-view>
     </view>
 
@@ -50,7 +52,7 @@
     <view>
         <text style="margin:10rpx;color:black;font-size:40rpx;font-weight:bold;">更多</text>
         <view class="more">
-             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}">
+             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" wx:if="{{index>=5}}">
                 <view class="img">
                     <image mode="widthFix" src="{{item.img}}" />
                     <text>{{item.people}}</text>

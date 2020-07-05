@@ -1,5 +1,6 @@
 /* pages/order/order.wxss */
 .order_wrap{
+    margin:5rpx;
     position: relative;
 }
 .header{

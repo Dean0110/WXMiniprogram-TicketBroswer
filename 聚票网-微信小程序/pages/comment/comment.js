@@ -1,25 +1,7 @@
 Page({
 
   data: {
-
-    orderInfo:{
-      "ticket":{
-        "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
-        "imgsrc":"../../img/orderimg/2.jpg",
-        "ticketPrice":380
-      },
-      "playTime":"2019-04-13 19:30",
-      "orderID":"24592077",
-      "orderTime":"2018.12.28 10:01:23",
-      "orderStatus":"支付成功",
-      "ticketAmount":"1",
-      "orderTotalPrice":"380.00",
-      "sendApproach":"快递",
-      "sendID":"2459207711",
-      "sendAddress":"重庆市沙坪坝区重庆大学虎溪校区"
-    },
-  
-
+    orderInfo:null,
     evaluate_contant:['评价条目一'],
     stars: [0, 1, 2, 3, 4],
     normalSrc: '../../img/icon/no-star.png',
@@ -27,20 +9,6 @@ Page({
     halfSrc: '../../img/icon/half-star.png',
     score: 0,
     scores: [0],
-    orderList:[
-      {
-        "ticket":{
-          "title":"2019林俊杰[圣所]世界巡回演唱会",
-          "imgsrc":"../../img/orderimg/2.jpg",
-          "ticketPrice":380
-        },
-        "orderStatus":"交易成功",
-        "orderNumber":"24592077",
-        "startTime":"时间：2018.12.28 10:01:23",
-        "ticketAmount":1,
-        "totalPrice":380
-      }
-    ]
   },
 
   // 提交事件
@@ -72,5 +40,25 @@ Page({
         scores: this.data.scores,
         score: score
       })
+  },
+
+  onLoad:function(options){
+    let id=options.id;
+    console.log(id);
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/order/findOrderMsgById',
+      data:{
+        "orderId":id
+      },
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+          that.setData({
+            orderInfo:res.data.data
+          })
+        }
+      }
+    })
   }
 })
