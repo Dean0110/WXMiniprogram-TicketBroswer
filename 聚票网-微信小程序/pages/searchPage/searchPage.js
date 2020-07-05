@@ -11,6 +11,7 @@ Page({
     searchHistory:null,
       
     searchRecommend:null,
+    number:1,
   },
 
   bindInput:function(e){
@@ -20,8 +21,13 @@ Page({
   },
 
   search(){
-    app.data.searchHistory.push(this.data.searchContent);
-    console.log(app.data.searchHistory);
+    // this.data.number++;
+    // console.log(this.data.number);
+    // this.setData({
+    //   number:this.data.number
+    // })
+   app.data.searchHistory.push(this.data.searchContent)
+  // console.log(app.data.searchHistory);
     wx.navigateTo({
       url: '../searchResult/searchResult?search_content='+this.data.searchContent,
     })
@@ -33,6 +39,7 @@ Page({
     this.setData({
       searchContent:content 
     }),
+    console.log(content);
     this.search()
   },
 

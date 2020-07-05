@@ -125,14 +125,7 @@
   position: relative;
   flex:2;
 }
-.img text{
-  position: absolute;
-  background-color: black;
-  color: white;
-  font-size: 36rpx;
-  top:0rpx;
-  right: 10rpx;
-}
+
 .img image{
   padding-left: 30rpx;
   border-radius: 20rpx;

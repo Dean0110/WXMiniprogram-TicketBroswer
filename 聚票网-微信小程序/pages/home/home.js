@@ -11,7 +11,7 @@ Page({
       {"text":"演唱会","id":0},
       {"text":"展览休闲","id":1},
       {"text":"话剧歌剧","id":2},
-      {"text":"体育","id":3},
+      {"text":"音乐剧","id":3},
       {"text":"全部分类","id":4}
     ],
     myswiperList:[
@@ -55,6 +55,7 @@ Page({
   },
 
   activeNav(e){
+    // console.log(this.data.mynavList[e.target.dataset.index].text);
     this.setData({
       currindexNav:e.target.dataset.index
     })

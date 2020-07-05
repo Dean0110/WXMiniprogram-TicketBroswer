@@ -24,14 +24,7 @@
     "pages/merchantTicketDetail/merchantTicketDetail",
     "pages/merchantOrder/merchantOrder",
     "pages/merchantOrderDetail/merchantOrderDetail",
-    "pages/merchantInfoManage/merchantInfoManage",
-    "pages/managerLogin/managerLogin",
-    "pages/managerUserList/managerUserList",
-    "pages/managerUserManage/managerUserManage",
-    "pages/managerOrder/managerOrder",
-    "pages/managerOrderDetail/managerOrderDetail",
-    "pages/managerTicket/managerTicket",
-    "pages/managerTicketDetail/managerTicketDetail"
+    "pages/merchantInfoManage/merchantInfoManage"
   ],
   "window": {
     "backgroundTextStyle": "light",

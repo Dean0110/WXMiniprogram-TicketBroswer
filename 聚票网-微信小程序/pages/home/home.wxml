@@ -55,11 +55,11 @@
              <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" wx:if="{{index>=5}}">
                 <view class="img">
                     <image mode="widthFix" src="{{item.img}}" />
-                    <text>{{item.people}}</text>
+                    
                 </view>
                 <view class="information">
                     <text class="title">{{item.name}}</text>
-                    <text>{{item.beginDate}}</text>
+                    <text>{{item.beginTime}}</text>
                     <text>{{item.address}}</text>
                     <text class="price">￥{{item.price}}起</text>
                 </view>

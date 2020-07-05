@@ -1,5 +1,6 @@
 .searchResult{}
 .title{
+    margin:20rpx;
     display: flex;
     justify-content: space-around;
 }

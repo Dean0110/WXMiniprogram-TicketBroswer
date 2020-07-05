@@ -24,5 +24,6 @@
             </view> 
         </view>
     </view>
+    <!-- <text >{{number}}</text> -->
 </view>
 
