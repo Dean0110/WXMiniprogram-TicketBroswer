@@ -1,20 +1,25 @@
 <view class="searchResult">
     <view class="title">
-        <input type="text" value="{{searchContent}}"></input>
-        <text bindtap="back" style="margin: auto">取消</text>
+        <input bindinput="bindInput" type="text" value="{{searchContent}}"></input>
+        <image bindtap="search" src="../../img/icon/sousuo.png"></image>
+    </view>
+    <view class="noneResult" style="display:{{ticketInfoList==null?'flex':'none'}}">
+        <image class="noneResultimg" src="../../img/icon/noneresult.png"></image>
+        <text>不好意思，没有找到呢</text>
     </view>
     <view class="list">
-    <navigator class="info" wx:for="{{ticketInfoList}}" wx:key="{{index}}" url="../ticket/ticket?id={{item.id}}">
-        <view class="img">
-            <image src="{{item.img}}" mode="widthFix" />
-        </view>
-        <view class="detail" url="../ticket/ticket">
-            <text class="Title">{{item.name}}</text>
-            <text class="date">{{item.beginTime}}</text>
-            <text class="place">{{item.address}}</text>
-            <text >\n</text>
-            <text class="price">￥{{item.price}}起</text>
-        </view>
-    </navigator>
+        <navigator class="info" wx:for="{{ticketInfoList}}" wx:key="{{index}}" url="../ticket/ticket?id={{item.id}}">
+            <view class="img">
+                <image src="{{item.img}}" mode="widthFix" />
+            </view>
+            <view class="detail" url="../ticket/ticket">
+                <text class="Title">{{item.name}}</text>
+                <text class="date">{{item.beginTime}}</text>
+                <text class="place">{{item.address}}</text>
+                <text >\n</text>
+                <text class="price">￥{{item.price}}起</text>
+            </view>
+        </navigator>
     </view>
 </view>
+
