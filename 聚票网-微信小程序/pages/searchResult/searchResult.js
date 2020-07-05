@@ -12,30 +12,54 @@ Page({
         "title":"曹轩宾2020[我]巡回演唱会 西安站",
         "dateTime":"2020.10.16 20:30",
         "place":"西安|MAO Livehouse",
-        "price":"￥150起"
+        "price":"150"
     },
     {
       "imgSrc":"../../img/recommend/1.jpg",
       "title":"扯馆儿喜剧专场——寅派动力",
       "dateTime":"2020.07.02-07.05",
       "place":"重庆|寅派动力",
-      "price":"￥80起"
+      "price":"80"
     },
     {
       "imgSrc":"../../img/recommend/2.jpg",
       "title":"开心麻花爆笑舞台剧《乌龙山伯爵》",
       "dateTime":"2020.07.10-07.12",
       "place":"重庆|重庆文化宫大剧院",
-      "price":"￥100起"
+      "price":"100"
   },
   {
     "imgSrc":"../../img/recommend/3.jpg",
     "title":"《重逢岛》新媒体艺术展",
     "dateTime":"2020.06.06-08.16",
     "place":"重庆|原美术馆",
-    "price":"￥35起"
+    "price":"35"
   }
     ]
+  },
+
+  showSearch(){
+    var that=this
+    wx.request({
+      url: 'http://localhost:10703/ticket/searchTicket',
+      method:'GET', 
+      data:{
+        keyword:that.data.searchContent
+      },
+      success(res){
+        that.setData({
+          detailList:{},
+          'detailList[0]':{
+            "imgSrc":res.data.data[0].img,
+            "title":res.data.data[0].name,
+            "dateTime":res.data.data[0].beginSoldDate+'~'+res.data.data[0].endSoldDate,
+            "place":res.data.data[0].address,
+            "price":res.data.data[0].price
+          }
+        })
+
+      }
+    })
   },
 
   /**
@@ -45,7 +69,7 @@ Page({
     this.setData({
       searchContent:options.search_content
     })
-    console.log(this.data.searchContent)
+    this.showSearch()
   },
 
   /**

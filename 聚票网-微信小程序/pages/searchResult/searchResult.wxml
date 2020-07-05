@@ -13,7 +13,7 @@
             <text class="date">{{item.dateTime}}</text>
             <text class="place">{{item.place}}</text>
             <text >\n</text>
-            <text class="price">{{item.price}}</text>
+            <text class="price">￥{{item.price}}起</text>
         </view>
     </navigator>
     </view>
