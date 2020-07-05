@@ -1,7 +1,7 @@
 
 <view class="orderdetail">
     <view style="display: flex; justify-content: center; align-items: center;">
-       <image class="order-headimage" src="{{orderDetail.ticket.imgsrc}}"></image>
+       <image class="order-headimage" src="{{orderInfo.ticketImg}}"></image>
     </view>
     <view class="paymentInformation">
         <view class="paymentinfo">
@@ -9,11 +9,11 @@
         </view>
         <view class="Title">
             <text >商品名称：</text>
-            <text class="title">{{orderDetail.ticket.name}}</text>
+            <text class="title">{{orderInfo.ticketName}}</text>
         </view>
         <view class="Time">
             <text >演出时间：</text>
-            <text class="time">{{orderDetail.playTime}}</text>
+            <text class="time">{{orderInfo.beginTime}}</text>
         </view>
     </view>
         <!-- <view class="choice">
@@ -27,27 +27,27 @@
 
         <view class="Ordernumber">
             <text >订单编号：</text>
-            <text class="ordernumber">{{orderDetail.orderID}}</text>
+            <text class="ordernumber">{{orderInfo.id}}</text>
         </view>
 
         <view class="Ordertime">
             <text >下单时间：</text>
-            <text class="ordertime">{{orderDetail.orderTime}}</text>
+            <text class="ordertime">{{orderInfo.orderTime}}</text>
         </view>
 
         <view class="Orderstatus">
             <text >订单状态：</text>
-            <text class="orderstatus">{{orderDetail.orderStatus}}</text>
+            <text class="orderstatus">{{orderInfo.state}}</text>
         </view>
 
         <view class="Orderticketamount">
             <text >订票数量：</text>
-            <text class="orderticketamount">{{orderDetail.ticketAmount}}</text>
+            <text class="orderticketamount">{{orderInfo.count}}</text>
         </view>
 
         <view class="Ordertotalprice">
             <text >商品总价：</text>
-            <text class="ordertotalprice">￥{{orderDetail.orderTotalPrice}}</text>
+            <text class="ordertotalprice">￥{{orderInfo.price*orderInfo.count}}</text>
         </view>
     </view>
         
@@ -58,17 +58,17 @@
 
         <view class="Dispatchmentstyle">
             <text >配送方式：</text>
-            <text class="dispatchmentstyle">{{orderDetail.sendApproach}}</text>
+            <text class="dispatchmentstyle">{{orderInfo.sendType}}</text>
         </view>
 
         <view class="Dispatchmentnumber">
             <text >配送号：</text>
-            <text class="dispatchmentnumber">{{orderDetail.sendID}}</text>
+            <text class="dispatchmentnumber">{{orderInfo.sendId}}</text>
         </view>
 
         <view class="Dispatchmentaddress">
             <text >配送地址：</text>
-            <text class="dispatchmentaddress">{{orderDetail.sendAddress}}</text>
+            <text class="dispatchmentaddress">{{orderInfo.address}}</text>
         </view>
     </view>
     <view class="choice">

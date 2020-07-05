@@ -66,6 +66,7 @@ textarea{
     top:600rpx;
     left: 20rpx;
     /* margin-top:33rpx; */
+    width:700rpx;
     word-wrap: wrap;
     font-size: 36rpx;
     height:400rpx;

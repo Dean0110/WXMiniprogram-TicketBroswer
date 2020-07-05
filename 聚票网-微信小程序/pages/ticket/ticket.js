@@ -5,50 +5,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    ticketDetail:{
-      "ticket":{
-        "name":"曹轩宾2020[我]全国巡回演唱会 西安站",
-        "imgsrc":"../../img/TicketImage/6.jpg",
-        "ticketPrice":150
-      },
-      "time":{
-        "date":"2020.10.16",
-        "time":"20:30",
-        "describe":"约90分钟，仅供参考，最终以现场实际时长为准"
-      },
-      "place":{
-        "city":"西安市",
-        "houseName":"MAO Livehouse西安",
-        "location":"雁翔路3369号曲江创意谷文化产业园地内"
-      }
-    },
-  },
-
-  addOrder(){
-    var order_page=pages[6]
-    order_page.setData({
-      orderList:this.data.orderList.push({
-        "ticket":{
-          "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
-          "imgsrc":"../../img/orderimg/2.jpg",
-          "ticketPrice":380
-        },
-        "orderStatus":"交易成功",
-        "orderNumber":"24592077",
-        "startTime":"时间：2018.12.28 10:01:23",
-        "ticketAmount":1,
-        "totalPrice":380
-      })
-    })
+    ticketInfo:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+      let id=options.id;
+      this.getCurrTicketInfo(id);
   },
 
+  getCurrTicketInfo(id){
+    let that=this;
+      wx.request({
+        url: 'http://localhost:8080/ticket/findTicketById',
+        data:{
+          "id":id
+        },
+        success(res){
+         console.log(res);
+         if(res.data.code===200){
+           that.setData({
+             ticketInfo:res.data.data
+           })
+         }
+        }
+      })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

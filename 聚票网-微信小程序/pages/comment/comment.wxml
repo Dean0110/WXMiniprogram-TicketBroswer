@@ -1,14 +1,13 @@
 <view class='container'> 
-    <view wx:for="{{orderList}}" wx:key="{{item}}">
+    <view >
     <view class="order_wrap">
             <view class="detail">
                 <view class="img">
-                    <image src="{{item.ticket.imgsrc}}"  mode="widthFix"/>
+                    <image src="{{orderInfo.ticketImg}}"  mode="widthFix"/>
                 </view>
                 <view class="detailInfo">
-                    <text class="title">{{item.ticket.title}}</text>
-                    <text class="time">{{item.startTime}}</text>
-                              
+                    <text class="title">{{orderInfo.ticketName}}</text>
+                    <text class="time">{{orderInfo.orderTime}}</text>     
                 </view>
             </view>
     </view>

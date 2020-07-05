@@ -1,27 +1,27 @@
-<!--pages/order/order.wxml-->
+
 <view wx:for="{{orderList}}" wx:key="{{item}}">
     <view class="order_wrap">
         <view class="header">
-            <text class="status">{{item.orderStatus}}</text>
-            <text class="ordernumber">订单编号：{{item.orderNumber}}</text>
+            <text class="status">{{item.state}}</text>
+            <text class="ordernumber">订单编号：{{item.id}}</text>
         </view>
-        <navigator class="info"  url="../orderDetail/orderDetail">
-            <text class="title">{{item.ticket.name}}</text>
+        <navigator class="info"  url="../orderDetail/orderDetail?id={{item.id}}">
+            <text class="title">{{item.ticketName}}</text>
             <view class="detail">
                 <view class="img">
-                    <image src="{{item.ticket.imgsrc}}"  mode="widthFix"/>
+                    <image src="{{item.ticketImg}}"  mode="widthFix"/>
                 </view>
                 <view class="detailInfo">
-                    <text class="time">{{item.startTime}}</text>
+                    <text class="time">{{item.orderTime}}</text>
                     <text >\n</text>
-                    <text class="number">价格：￥{{item.ticket.ticketPrice}} * {{item.ticketAmount}}</text>
+                    <text class="number">价格：￥{{item.price}} * {{item.count}}</text>
                     <text >\n</text>
                     <view class="bottomInfo">
-                        <text class="totalprice">总价：￥{{item.totalPrice}}</text>
+                        <text class="totalprice">总价：￥{{item.price*item.count}}</text>
                         <view class="bottomButton">
-                            <navigator url="../comment/comment">
-                                <button class="comment" size="default" style="height:80rpx;">评价订单</button>
-                            </navigator>
+                            <!-- <navigator url="../comment/comment" hover-stop-propagation="{{true}}" > -->
+                                <button class="comment" size="mini" catchtap="change" data-index="{{item.id}}" style="height:80rpx;">评价订单</button>
+                            <!-- </navigator> -->
                         </view>
                     </view>
                 </view>
