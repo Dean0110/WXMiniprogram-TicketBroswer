@@ -1,12 +1,13 @@
-// pages/home/home.js
+// pages/variety/variety.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    showMoreView:false,
     currindexNav:0,
+    tagname:null,
     mynavList:[
       {"text":"全部","id":0},
       {"text":"演唱会","id":1},
@@ -16,76 +17,77 @@ Page({
       {"text":"曲苑杂坛","id":5},
       {"text":"儿童亲子","id":6}
     ],
-    myswiperList:[
-      {"imgSrc":"../../img/sliderImage/4.jpg"},
-      {"imgSrc":"../../img/sliderImage/5.jpg"},
-      {"imgSrc":"../../img/sliderImage/6.jpg"},
-      {"imgSrc":"../../img/sliderImage/7.jpg"}
-    ],
-    recommendList:null,
-    moreList:null,
-  },
-
-  showMore(){
-    this.setData({
-      showMoreView:!this.data.showMoreView
-    })
-  },
-
-  hideMore(){
-    this.setData({
-      showMoreView:false
-    })
-  },
-
-  turnToMerchant(){
-    wx.navigateTo({
-      url:'../merchantLogin/merchantLogin'
-    })
-  },
-
-  turnToManager(){
-    wx.navigateTo({
-      url:'../managerLogin/managerLogin'
-    })
-  },
-
-  searchNavigateTo(){
-    wx.navigateTo({
-      url: '../searchPage/searchPage',
-    })
+    ticketByKindList:null,
   },
 
   activeNav(e){
-     //this.data.currindexNav=e.target.dataset.index;
-     //console.log(this.data.mynavList[e.target.dataset.index].text);
-     //console.log(e.target.dataset.index);
-    this.setData({
-      currindexNav:e.target.dataset.index
-    });
-    wx.navigateTo({
-      url: '../variety/variety?tagname='+this.data.mynavList[this.data.currindexNav].text+"&index="+this.data.currindexNav,
-    })
+   let that=this;
+   this.setData({
+     currindexNav:e.target.dataset.index
+   })
+   this.setData({
+     tagname:this.data.mynavList[this.data.currindexNav].text
+   })
+   if(this.data.currindexNav===0){
+      wx.request({
+        url: 'http://localhost:8080/ticket/all',
+        success(res){
+          if(res.data.code===200){
+            that.setData({
+              ticketByKindList:res.data.data
+            })
+          }
+        }
+      })
+   }
+   else{
+   wx.request({
+    url: 'http://localhost:8080/ticket/searchByTagName',
+    data:{
+      "name":this.data.tagname
     },
+    success(res){
+      console.log(res);
+      if(res.data.code===200){
+        that.setData({
+          ticketByKindList:res.data.data
+        })
+      }
+    }
+  
+  })
+}
+},
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     let that=this;
+    let tagname=options.tagname;
+    let index=options.index;
+    console.log(tagname);
+    console.log(index);
+    this.setData({
+      currindexNav:index
+    })
+    this.setData({
+      tagname:tagname
+    })
     wx.request({
-      url: 'http://localhost:8080/ticket/all',
+      url: 'http://localhost:8080/ticket/searchByTagName',
+      data:{
+        "name":this.data.tagname
+      },
       success(res){
         console.log(res);
         if(res.data.code===200){
           that.setData({
-            recommendList:res.data.data
-          }),
-          that.setData({
-            moreList:res.data.data
+            ticketByKindList:res.data.data
           })
         }
       }
     })
+   // console.log(this.data.currindexNav);
   },
 
   /**

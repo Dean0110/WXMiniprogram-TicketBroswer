@@ -1,0 +1,25 @@
+<!--pages/variety/variety.wxml-->
+<view class="nav_wrap">
+        <scroll-view class="nav" scroll-x> 
+            <view  bindtap="activeNav" data-index="{{index}}"
+            class="nav_item {{index===currindexNav?'active':''}}"
+            wx:for="{{mynavList}}" wx:key="{{index}}">
+                {{item.text}}
+            </view>
+        </scroll-view>
+</view>
+<view>
+    <view class="more">
+             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{ticketByKindList}}" wx:key="{{index}}">
+                <view class="img">
+                    <image mode="widthFix" src="{{item.img}}" />
+                </view>
+                <view class="information">
+                    <text class="title">{{item.name}}</text>
+                    <text>{{item.beginTime}}</text>
+                    <text>{{item.address}}</text>
+                    <text class="price">￥{{item.price}}起</text>
+                </view>
+            </navigator>
+    </view>
+</view>

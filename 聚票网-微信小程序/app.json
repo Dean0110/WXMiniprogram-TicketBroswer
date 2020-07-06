@@ -2,6 +2,8 @@
   "pages": [
     
     "pages/home/home",
+    "pages/variety/variety",
+    
     "pages/welcome/welcome",
     "pages/ticket/ticket",
     "pages/infoMerchant/infoMerchant",

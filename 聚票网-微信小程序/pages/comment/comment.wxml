@@ -37,7 +37,7 @@
                 </view> 
             </view> 
             </block>
-            <textarea  placeholder="...说点什么..." maxlength="600"></textarea>
+            <textarea bindinput="commentInfo" placeholder="...说点什么..." maxlength="600"></textarea>
     <button class='submit_button' bindtap='submit_evaluate' type='primary'>
     提交
     </button> 
