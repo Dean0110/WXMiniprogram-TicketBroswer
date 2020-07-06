@@ -34,7 +34,6 @@ text{
   color:gray;
 }
 .title,.time,.orderinfo,.ordernumber,.ordertime,.orderstatus{
- 
   color: black;
 }
 

@@ -1,2 +1,106 @@
 <!--pages/merchantTicketDetail/merchantTicketDetail.wxml-->
-<text>pages/merchantTicketDetail/merchantTicketDetail.wxml</text>
+<view class="ticket" style="display:{{editTicket?'none':'flex'}}">
+    <view class="top">
+        <view class="img">
+            <image mode="widthFix" src="{{ticketInfo.img}}" />
+        </view>
+        <view class="title">
+            <text class="theme">{{ticketInfo.name}}</text>
+            <text class="price">￥{{ticketInfo.price}}</text>
+            <button class="editTicketDetail" bindtap="openEdit">修改</button>
+        </view>
+    </view>
+
+    <view class="main">
+        <view class="time">
+            <text class="dateTime">{{ticketInfo.beginTime}}</text>
+            <text class="desc">{{ticketInfo.endTime}}</text>
+        </view>
+        <view class="place">
+            <text class="housename">{{ticketInfo.address}}</text>
+            <text class="location">{{ticketInfo.address}}</text>
+        </view>
+        <view class="merchant">
+            <view class="img">
+                <image mode="widthFix" src="../../img/icon/goupiaoren.png"></image>
+            </view>
+            <view class="info">
+                <text class="name">商家名</text>
+                <text class="level">商家等级</text>
+                <text class="telenumber">商家电话</text>
+            </view>
+        </view>
+        <view class="function">
+            <button class="detail">详情</button>
+            <button class="notice">须知</button>
+            <button class="comment">评价</button>
+        </view>
+
+        <view class="detailinfo">
+            <text class="desc">{{ticketInfo.introduction}}</text>
+            <image mode="scaleToFill" src="{{ticketInfo.img}}" />
+        </view>
+    </view>
+</view>
+
+<view style="display:{{editTicket?'flex':'none'}}">
+  <view class="ticketdetail">
+      <view style="display: flex; justify-content: center; align-items: center;">
+        <image class="ticket-headimage" src="{{ticketInfo.img}}"></image>
+      </view>
+      <!-- <view class="infoEdit">
+          <text class="info-text">票品名称：</text>
+          <textarea class="info-input-text" value='{{ticketInfo.name}}'></textarea>     
+      </view>
+      <view class="infoEdit">
+          <text class="info-text">演出时间：</text>
+          <textarea class="info-input-text" value='{{ticketInfo.beginTime}}'></textarea>
+      </view>
+      <view class="infoEdit">
+          <text class="info-text">结束时间：</text>
+          <textarea class="info-input-text" value='{{ticketInfo.endTime}}'></textarea>
+      </view>
+      <view class="infoEdit">
+          <text class="info-text">票价：</text>
+          <textarea class="info-input-text" value='{{ticketInfo.price}}'></textarea>
+      </view>
+
+      <view class="infoEdit">
+          <text class="info-text">演出地点：</text>
+          <textarea class="info-input-text" value='{{ticketInfo.address}}'></textarea>
+      </view>
+      <view class="infoEdit">
+          <text class="info-text">介绍：</text>
+          <textarea class="info-input-text" style="height: 300rpx" value='{{ticketInfo.introduction}}'></textarea>
+      </view> -->
+
+      <view class="info-box">
+        <view class="info-hint">票品名称：</view>
+        <textarea class="info-input" value='{{ticketInfo.name}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">演出时间：</view>
+        <textarea class="info-input" value='{{ticketInfo.beginTime}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">结束时间：</view>
+        <textarea class="info-input" value='{{ticketInfo.endTime}}'></textarea>
+      </view>
+       <view class="info-box">
+        <view class="info-hint">演出地点：</view>
+        <textarea class="info-input" value='{{ticketInfo.address}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">票价：</view>
+        <textarea class="info-input" value='{{ticketInfo.price}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">介绍：</view>
+        <textarea class="info-input" style="height=300rpx" value='{{ticketInfo.introduction}}'></textarea>
+      </view>
+
+      <text >\n\n\n\n\n\n\n</text>
+
+  </view>
+      
+</view>

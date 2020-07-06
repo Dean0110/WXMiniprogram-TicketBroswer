@@ -1,2 +1,27 @@
-<!--pages/merchantTicket/merchantTicket.wxml-->
-<text>pages/merchantTicket/merchantTicket.wxml</text>
+<navigator url="../merchantOrder/merchantOrder?id={{merchantID}}">点击跳转：订单管理</navigator>
+
+<view class="searchResult">
+    <view class="noneResult" style="display:{{ticketInfoList==null?'flex':'none'}}">
+        <image class="noneResultimg" src="../../img/icon/noneresult.png"></image>
+        <text>不好意思，您当前没有票品</text>
+    </view>
+    <view class="list">
+        <navigator class="info" wx:for="{{ticketInfoList}}" wx:key="{{index}}" url="../merchantTicketDetail/merchantTicketDetail?id={{item.id}}">
+            <view class="img">
+                <image src="{{item.img}}" mode="widthFix" />
+            </view>
+            <view class="detail">
+                <text class="Title">{{item.name}}</text>
+                <text class="date">{{item.beginTime}}</text>
+                <text class="place">{{item.address}}</text>
+                <text >\n</text>
+                <view class="bottomInfo">
+                  <text class="price">￥{{item.price}}起</text>
+                  <view class="bottomButton">
+                      <button class="delete" size="mini" catchtap="deleteOrder" data-index="{{item.id}}" style="height:60rpx;">删除票品</button>
+                  </view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</view>

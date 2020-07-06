@@ -10,7 +10,7 @@ Page({
 
   merchantLogin(){
     wx.reLaunch({
-      url: '../merchantOrder/merchantOrder',
+      url: '../merchantTicket/merchantTicket',
     })
   },
 

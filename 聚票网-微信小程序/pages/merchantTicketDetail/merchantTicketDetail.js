@@ -5,14 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
+    editTicket:false,
+    ticketInfo:null,
+  },
 
+  getCurrTicketInfo(id){
+    let that=this;
+      wx.request({
+        url: 'http://localhost:8080/ticket/findTicketById',
+        data:{
+          "id":id
+        },
+        success(res){
+         console.log(res);
+         if(res.data.code===200){
+           that.setData({
+             ticketInfo:res.data.data
+           })
+         }
+        }
+      })
+  },
+
+  openEdit(){
+    this.setData({
+      editTicket:true,
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let id=options.id;
+    this.getCurrTicketInfo(id);
   },
 
   /**

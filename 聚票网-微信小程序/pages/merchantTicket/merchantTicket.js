@@ -5,14 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
+    merchantID:2,
+    ticketInfoList:null,
+  },
 
+
+  getTicketByID(){
+    let that=this;
+    that.setData({
+      ticketInfoList:null
+    })
+    // 判断是否搜索为空
+    wx.request({
+      url: 'http://localhost:8080/ticket/allMerchantTicket',
+      data:{
+        "merchantId":this.data.merchantID
+      },
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+        that.setData({
+          ticketInfoList:res.data.data
+        })
+      }
+      }
+    })
+ 
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTicketByID();
   },
 
   /**
