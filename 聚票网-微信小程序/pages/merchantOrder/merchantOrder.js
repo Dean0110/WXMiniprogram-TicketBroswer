@@ -5,14 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
+    orderList:null,
+  },
 
+  changeOrder:function(event){
+    let id=event.currentTarget.dataset.index;
+    console.log(id);
+    wx.navigateTo({
+      url: '../merchantOrderDetail/merchantOrderDetail?id='+id,
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/order/findOrderMsgByUserId',
+      data:{
+        "userId":1,
 
+      },
+      success(res){
+        console.log(res);
+        that.setData({
+          orderList:res.data.data
+        })
+      }
+    })
   },
 
   /**

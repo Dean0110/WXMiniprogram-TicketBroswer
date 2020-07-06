@@ -5,14 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
+    orderInfo:null,
+  },
 
+  getOrderDetail(id){
+    let that=this;
+      wx.request({
+        url: 'http://localhost:8080/order/findOrderMsgById',
+        data:{
+          "orderId":id
+        },
+        success(res){
+          console.log(res);
+          if(res.data.code===200){
+            that.setData({
+              orderInfo:res.data.data
+            })
+          }
+        }
+      })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let id=options.id;
+    this.getOrderDetail(id);
   },
 
   /**

@@ -5,7 +5,7 @@
   <text class="merchantLoginHead">商家登录</text>
   <input id="login-merchantID" type="number" placeholder="请输入登录账户"></input>
   <input id="login-merchantPswd" type="number" placeholder="请输入登录密码"></input>
-  <button id="login-merchantBtn">登录</button>
+  <button id="login-merchantBtn" bindtap="merchantLogin">登录</button>
   <text id="login-hint">没有账号？请联系管理员。\n管理员联系电话：\n</text>
   <text id="login-hintNumber">  15111111111</text>
 

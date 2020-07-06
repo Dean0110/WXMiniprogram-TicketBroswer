@@ -1,3 +1,27 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "tabBar": {
+    "backGroundColor": "black",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/merchantTicket/merchantTicket",
+        "iconPath": "img/icon/shouye.png",
+        "selectedIconPath": "img/icon/shouye.png",
+        "text": "票品"
+      },
+      {
+        "pagePath": "pages/merchantOrder/merchantOrder",
+        "iconPath": "img/icon/dingdan.png",
+        "selectedIconPath": "img/icon/dingdan.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/merchantInfo/merchantInfo",
+        "iconPath": "img/icon/wode.png",
+        "selectedIconPath": "img/icon/wode.png",
+        "text": "信息"
+      }
+    ]
+  }
 }

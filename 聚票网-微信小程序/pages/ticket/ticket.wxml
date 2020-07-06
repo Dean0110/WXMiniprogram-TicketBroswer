@@ -32,7 +32,7 @@
         <view class="function">
             <button class="detail">详情</button>
             <button class="notice">须知</button>
-            <button class="recommend">推荐</button>
+            <button class="comment">评价</button>
         </view>
         
         <view class="bottomB">  
