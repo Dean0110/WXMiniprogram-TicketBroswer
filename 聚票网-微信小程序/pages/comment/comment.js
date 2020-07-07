@@ -25,7 +25,7 @@ Page({
     //console.log(this.data.commentdetail);
     wx.request({
       url: 'http://localhost:8080/order/updateOrderCommentByUserId?id='+this.data.id+'&comment='+this.data.commentdetail+'&level='+score,
-      method:'POST',
+      method:'PUT',
     })
   },
 

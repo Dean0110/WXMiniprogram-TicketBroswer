@@ -40,9 +40,9 @@
         <scroll-view class="recommend" scroll-x> 
             <navigator url="../ticket/ticket?id={{item.id}}" class="recommend_item" 
                 wx:for="{{recommendList}}" wx:key="{{index}}">
-                <view wx:if="{{index<5}}">
+                <view >
                 <image mode="widthFix" src="{{item.img}}" />
-                <text >{{item.people}}</text>
+                <!-- <text >{{item.people}}</text> -->
                 </view>
             </navigator>
         </scroll-view>
@@ -52,7 +52,7 @@
     <view>
         <text style="margin:10rpx;color:black;font-size:40rpx;font-weight:bold;">更多</text>
         <view class="more">
-             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" wx:if="{{index>=5}}">
+             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" >
                 <view class="img">
                     <image mode="widthFix" src="{{item.img}}" />
                     

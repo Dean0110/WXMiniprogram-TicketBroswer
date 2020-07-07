@@ -1,0 +1,37 @@
+<!--pages/buy/buy.wxml-->
+<view>
+    <!-- <view class="more"> -->
+        <!-- <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" > -->
+        <view class="more_item">
+            <view class="img">
+                <image mode="widthFix" src="{{detail.img}}" />      
+            </view>
+            <view class="information">
+                    <text class="title">{{detail.name}}</text>
+                    <text>{{detail.beginTime}}</text>
+                    <text>{{detail.address}}</text>
+                    <text class="price">￥{{detail.price}}</text>
+            </view>
+        </view>
+
+        <view class="userDetail">
+            <view class="address">
+                <text class="name">地址：</text>
+                <text >{{address}}</text>
+            </view>
+            <view class="beizhu">
+                <text class="name">备注：</text>
+                <input bindinput="getBeizhu" placeholder="备注信息" class="beizhuInfo"></input>
+            </view>
+            <view class="count">
+                <text class="name">数量：</text>
+                <input bindinput="getCount" placeholder="数量" class="countInfo"></input>
+            </view>
+        </view>
+        <!-- </navigator> -->
+        <!-- <view class="bottomB"> -->
+            <!-- <text ></text> -->
+            <button bindtap="insert" class="buy">确认购买</button>
+        <!-- </view> -->
+    <!-- </view> -->
+    </view>

@@ -1,4 +1,5 @@
 // pages/order/order.js
+const app=getApp()
 Page({
 
   /**
@@ -38,7 +39,7 @@ Page({
     wx.request({
       url: 'http://localhost:8080/order/findOrderMsgByUserId',
       data:{
-        "userId":1,
+        "userId":app.data.id
 
       },
       success(res){

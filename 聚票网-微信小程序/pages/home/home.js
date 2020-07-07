@@ -1,4 +1,5 @@
 // pages/home/home.js
+const app=getApp()
 Page({
 
   /**
@@ -73,15 +74,29 @@ Page({
   onLoad: function (options) {
     let that=this;
     wx.request({
-      url: 'http://localhost:8080/ticket/all',
+      url: 'http://localhost:8080/ticket/findMoreTicket',
+      data:{
+        "id":app.data.id
+      },
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+          that.setData({
+            moreList:res.data.data
+          })
+        }
+      }
+    }),
+    wx.request({
+      url: 'http://localhost:8080/ticket/findSubscribe',
+      data:{
+        "id":app.data.id
+      },
       success(res){
         console.log(res);
         if(res.data.code===200){
           that.setData({
             recommendList:res.data.data
-          }),
-          that.setData({
-            moreList:res.data.data
           })
         }
       }

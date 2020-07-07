@@ -1,0 +1,83 @@
+/* pages/buy/buy.wxss */
+/* .more{
+    position: relative;
+} */
+.more_item{
+    margin-top: 30rpx;
+    width: 95%;
+    padding-top:20rpx;
+    margin-left: 10rpx;
+    /* height: 500rpx; */
+    display: flex;
+    justify-content: space-between;
+    border: 3rpx solid rgb(219, 211, 211);
+    border-radius: 50rpx;
+  }
+  .more_item .img{
+    position: relative;
+    flex:2;
+  }
+  
+  .img image{
+    padding-left: 30rpx;
+    border-radius: 20rpx;
+    width: 100%;
+  }
+  .more_item .information{
+    position: relative;
+    padding-left: 30rpx;
+    flex:4;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+  }
+  .information text{
+    margin-top: 10rpx;
+    color: gray;
+    font-size: 32rpx;
+  }
+  .information .title{
+    margin-top: 0rpx;
+    color: black;
+    font-size: 36rpx;
+    font-weight: bold;
+  }
+  
+  .information .price{
+    color: red;
+    font-size: 40rpx;
+    position: absolute;
+    left: 30rpx;
+    bottom: 2rpx;
+  }
+
+
+  .address,.beizhu,.count{
+      display: flex;
+      justify-content:start;
+  }
+  .userDetail{
+      width: 95%;
+      margin-top:30rpx;
+      margin-left: 10rpx;
+      padding-top: 20rpx;
+      border: 3rpx solid rgb(219, 211, 211);
+      border-radius: 50rpx;
+      height: 500rpx;
+  }
+
+  .beizhu,.count{
+      margin-top: 50rpx;
+  }
+
+  .buy{
+      width: 50%;
+      position: absolute;
+      bottom:10rpx;
+      right:10rpx;
+      border: 3rpx solid rgb(219, 211, 211);
+      border-radius: 50rpx;
+  }
+
+
+  

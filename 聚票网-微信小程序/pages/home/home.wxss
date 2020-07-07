@@ -146,7 +146,7 @@
 .information .title{
   margin-top: 0rpx;
   color: black;
-  font-size: 40rpx;
+  font-size: 36rpx;
   font-weight: bold;
 }
 

@@ -1,9 +1,10 @@
 {
   "pages": [
     
+    
     "pages/home/home",
     "pages/variety/variety",
-    
+    "pages/buy/buy",
     "pages/welcome/welcome",
     "pages/ticket/ticket",
     "pages/infoMerchant/infoMerchant",
