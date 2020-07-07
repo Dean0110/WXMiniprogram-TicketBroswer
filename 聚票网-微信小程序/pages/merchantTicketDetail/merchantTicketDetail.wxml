@@ -102,5 +102,7 @@
       <text >\n\n\n\n\n\n\n</text>
 
   </view>
-      
+    <button class='submit_button' bindtap='submit' type='primary'>
+    提交
+    </button> 
 </view>

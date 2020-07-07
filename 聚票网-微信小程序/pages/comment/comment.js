@@ -13,7 +13,21 @@ Page({
 
   // 提交事件
   submit_evaluate: function () {
-    console.log('评价得分' + this.data.scores*2)
+    // console.log('评价得分' + this.data.scores*2)
+    wx.showModal({
+      title: "提示",
+      content: "是否提交评价？",
+      cancelColor: 'cancelColor',
+      success(res){
+        if(res.confirm){
+          wx.showToast({
+            title: '评价成功',
+          })
+        }else if(res.cancel){
+
+        }
+      }
+    })
   },
 
   //点击左边,半颗星

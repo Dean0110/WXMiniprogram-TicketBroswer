@@ -9,8 +9,7 @@
         </view>
         <view class="Title">
             <text >商品名称：</text>
-            <text class="title">{{orderInfo.ticketName}}</text>
-            <button class="editOrderDetail">修改</button>        
+            <text class="title">{{orderInfo.ticketName}}</text>  
         </view>
         <view class="Time">
             <text >演出时间：</text>
@@ -56,13 +55,12 @@
         <view class="Dispatchmentstyle">
             <text >配送方式：</text>
             <text class="dispatchmentstyle">{{orderInfo.sendType}}</text>
-            <button class="editOrderDetail">修改</button>
         </view>
 
         <view class="Dispatchmentnumber">
             <text >配送号：</text>
             <text class="dispatchmentnumber">{{orderInfo.sendId}}</text>
-            <button class="editOrderDetail">修改</button>
+            <!-- <button class="editOrderDetail">修改</button> -->
         </view>
 
         <view class="Dispatchmentaddress">

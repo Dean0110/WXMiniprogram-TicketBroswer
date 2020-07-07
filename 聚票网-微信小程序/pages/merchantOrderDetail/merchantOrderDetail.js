@@ -16,7 +16,6 @@ Page({
           "orderId":id
         },
         success(res){
-          console.log(res);
           if(res.data.code===200){
             that.setData({
               orderInfo:res.data.data

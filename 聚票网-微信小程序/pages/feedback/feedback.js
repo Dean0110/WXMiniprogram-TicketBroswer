@@ -15,9 +15,8 @@ Page({
       cancelColor: 'cancelColor',
       success(res){
         if(res.confirm){
-          wx.showModal({
-            content: "提交成功",
-            
+          wx.showToast({
+            title: '提交成功',
           })
         }else if(res.cancel){
 

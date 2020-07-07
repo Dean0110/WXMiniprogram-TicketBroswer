@@ -5,35 +5,81 @@ Page({
    * 页面的初始数据
    */
   data: {
+    merchantID:null,
     orderList:null,
   },
 
-  changeOrder:function(event){
+  deleteOrder:function(event){
     let id=event.currentTarget.dataset.index;
-    console.log(id);
-    wx.navigateTo({
-      url: '../merchantOrderDetail/merchantOrderDetail?id='+id,
+    var that=this;
+    wx.showModal({
+      title: "提示",
+      content: "确认删除订单？",
+      cancelColor: 'cancelColor',
+      success(res){
+        if(res.confirm){
+          wx.request({
+            url: 'http://localhost:8080/order/deleteOrderById?id='+id,
+            method:"DELETE",
+            success(res){
+              if(res.data.code===200){
+                that.loadOrder();
+            }
+            }
+          })
+        }else if(res.cancel){
+        }
+      }
     })
+
+
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  loadOrder(){
     let that=this;
     wx.request({
       url: 'http://localhost:8080/order/findOrderMsgByUserId',
       data:{
         "userId":1,
-
       },
       success(res){
-        console.log(res);
-        that.setData({
-          orderList:res.data.data
-        })
+        if(res.data.code==200){
+          that.setData({
+            orderList:res.data.data
+          })
+        }
+
       }
     })
+  },
+
+  switchToTicket(){
+    wx.redirectTo({
+      url: '../merchantTicket/merchantTicket?id='+this.data.merchantID,
+    })
+  },
+
+  switchToOrder(){
+    wx.redirectTo({
+      url: '../merchantOrder/merchantOrder?id='+this.data.merchantID,
+    })
+  },
+
+  switchToInfo(){
+    wx.redirectTo({
+      url: '../merchantInfoManage/merchantInfoManage?id='+this.data.merchantID,
+    })
+  },
+
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      merchantID:options.id,
+    })
+    this.loadOrder();
   },
 
   /**

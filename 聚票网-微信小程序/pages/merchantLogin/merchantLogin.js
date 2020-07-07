@@ -5,13 +5,46 @@ Page({
    * 页面的初始数据
    */
   data: {
+    merchantID:null,
+    merchantPswd:null,
+  },
 
+  inputLoginID(e){
+    this.setData({
+      merchantID:e.detail.value,
+    })
+  },
+
+  inputPswd(e){
+    this.setData({
+      merchantPswd:e.detail.value,
+    })
   },
 
   merchantLogin(){
-    wx.reLaunch({
-      url: '../merchantTicket/merchantTicket',
+    var that=this;
+    wx.request({
+      url: 'http://localhost:8080/merchant/loginById',
+      data:{
+        "id":that.data.merchantID,
+        "password":that.data.merchantPswd,
+      },
+      success(res){
+        if(res.data.code==200){
+          wx.reLaunch({
+            url: '../merchantTicket/merchantTicket?id='+that.data.merchantID,
+          })
+        }
+        else{
+          wx.showToast({
+            title: '请正确输入登录ID与密码',
+            icon: 'none',
+          })
+        }
+      }
+  
     })
+
   },
 
   /**

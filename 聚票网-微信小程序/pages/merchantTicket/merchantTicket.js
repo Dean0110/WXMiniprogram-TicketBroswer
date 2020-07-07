@@ -5,10 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-    merchantID:2,
+    merchantID:null,
     ticketInfoList:null,
   },
 
+  // turnToOrder(){
+  //   wx.redirectTo({
+  //     url: '../merchantOrder/merchantOrder?id='+this.data.merchantID,
+  //   })
+  // },
+
+  switchToTicket(){
+    wx.redirectTo({
+      url: '../merchantTicket/merchantTicket?id='+this.data.merchantID,
+    })
+  },
+
+  switchToOrder(){
+    wx.redirectTo({
+      url: '../merchantOrder/merchantOrder?id='+this.data.merchantID,
+    })
+  },
+
+  switchToInfo(){
+    wx.redirectTo({
+      url: '../merchantInfoManage/merchantInfoManage?id='+this.data.merchantID,
+    })
+  },
 
   getTicketByID(){
     let that=this;
@@ -33,10 +56,44 @@ Page({
  
   },
 
+  deleteTicket(event){
+
+    let id=event.currentTarget.dataset.index;
+    var that=this;
+    wx.showModal({
+      title: "提示",
+      content: "确认删除票品？",
+      cancelColor: 'cancelColor',
+      success(res){
+        if(res.confirm){
+          wx.request({
+            url: 'http://localhost:8080/ticket/deleteTicket?ticketId='+id+'&merchantId='+that.data.merchantID,
+            method:"DELETE",
+            // data:{
+            //   "ticketId":id,
+            //   "merchantId":that.data.merchantID
+            // },
+            success(res){
+              if(res.data.code===200){
+                that.getTicketByID()
+            }
+            }
+          })
+        }else if(res.cancel){
+        }
+      }
+    })
+
+
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      merchantID:options.id,
+    })
     this.getTicketByID();
   },
 

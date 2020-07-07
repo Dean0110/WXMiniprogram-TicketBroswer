@@ -1,5 +1,5 @@
-<navigator url="../merchantOrder/merchantOrder?id={{merchantID}}">点击跳转：订单管理</navigator>
-
+<!-- <navigator url="../merchantOrder/merchantOrder?id={{merchantID}}">点击跳转：订单管理</navigator> -->
+<!-- <view bindtap="turnToOrder">点击跳转：订单管理</view> -->
 <view class="searchResult">
     <view class="noneResult" style="display:{{ticketInfoList==null?'flex':'none'}}">
         <image class="noneResultimg" src="../../img/icon/noneresult.png"></image>
@@ -18,10 +18,25 @@
                 <view class="bottomInfo">
                   <text class="price">￥{{item.price}}起</text>
                   <view class="bottomButton">
-                      <button class="delete" size="mini" catchtap="deleteOrder" data-index="{{item.id}}" style="height:60rpx;">删除票品</button>
+                      <button class="delete" size="mini" catchtap="deleteTicket" data-index="{{item.id}}" style="height:60rpx;">删除票品</button>
                   </view>
                 </view>
             </view>
         </navigator>
+    </view>
+</view>
+
+<view class="myTabbar">
+    <view class="littleTabbar" bindtap="switchToTicket">
+        <image src="../../img/icon/shouye.png"></image>
+        <text>票品</text>
+    </view>
+    <view class="littleTabbar" bindtap="switchToOrder">
+        <image src="../../img/icon/dingdan.png"></image>
+        <text>订单</text>
+    </view>
+    <view class="littleTabbar" bindtap="switchToInfo">
+        <image src="../../img/icon/wode.png"></image>
+        <text>我的</text>
     </view>
 </view>

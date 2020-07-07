@@ -33,6 +33,20 @@ Page({
     })
   },
 
+  submit(){
+    wx.showModal({
+      cancelColor: 'cancelColor',
+      content: "是否提交修改？",
+      success(res){
+        if(res.confirm){
+          wx.showToast({
+            title: '修改成功',
+          })
+        }
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

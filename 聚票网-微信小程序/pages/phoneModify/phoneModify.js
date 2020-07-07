@@ -11,13 +11,12 @@ Page({
   submitPhone:function(){
     wx.showModal({
       title: "提示",
-      content: "是否提交反馈？",
+      content: "是否提交修改？",
       cancelColor: 'cancelColor',
       success(res){
         if(res.confirm){
-          wx.showModal({
-            content: "提交成功",
-            
+          wx.showToast({
+            title: '修改成功',
           })
         }else if(res.cancel){
 

@@ -5,14 +5,58 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    merchantID:null,
+    merchantInfo:null,
+    infoitems:[
+      { text: '商家名'},
+      { text: '商家地址'},
+      { text: '商家介绍'},
+      { text: '商家电话'},
+    ]
   },
+
+  loadMerchantInfo(){
+    var that=this;
+    wx.request({
+      url: 'http://localhost:8080/merchant/findMerchantById?id='+that.data.merchantID,
+      success(res){
+        if(res.data.code==200){
+          console.log(res.data.data)
+          that.setData({
+            merchantInfo:res.data.data,
+          })
+        }
+      }
+    })
+  },
+
+  switchToTicket(){
+    wx.redirectTo({
+      url: '../merchantTicket/merchantTicket?id='+this.data.merchantID,
+    })
+  },
+
+  switchToOrder(){
+    wx.redirectTo({
+      url: '../merchantOrder/merchantOrder?id='+this.data.merchantID,
+    })
+  },
+
+  switchToInfo(){
+    wx.redirectTo({
+      url: '../merchantInfoManage/merchantInfoManage?id='+this.data.merchantID,
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      merchantID:options.id
+    });
+    this.loadMerchantInfo();
   },
 
   /**

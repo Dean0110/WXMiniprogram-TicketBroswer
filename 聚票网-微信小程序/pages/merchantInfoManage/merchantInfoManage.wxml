@@ -1,2 +1,35 @@
 <!--pages/merchantInfoManage/merchantInfoManage.wxml-->
-<text>pages/merchantInfoManage/merchantInfoManage.wxml</text>
+<block>
+  <view class="merchantinfo">
+    <image class="merchantinfo-avatar" src="{{merchantInfo.img}}" mode="cover"></image>
+    <view class="merchantinfo-nickname">{{merchantInfo.name}}</view>
+  </view>
+</block>
+<view class="div-line"></view>
+
+<view class="list-wrapper">
+  <view wx:for="{{infoitems}}" wx:key="item">
+    <view class="list-item">
+      <view class='merchantinfo-item'>
+        <text class="merchantitem-text">{{item.text}}</text>
+        <text class="merchantitem-array">></text>
+      </view>
+      <view class="div-line"></view>
+    </view>
+  </view>
+</view>
+
+<view class="myTabbar">
+    <view class="littleTabbar" bindtap="switchToTicket">
+        <image src="../../img/icon/shouye.png"></image>
+        <text>票品</text>
+    </view>
+    <view class="littleTabbar" bindtap="switchToOrder">
+        <image src="../../img/icon/dingdan.png"></image>
+        <text>订单</text>
+    </view>
+    <view class="littleTabbar" bindtap="switchToInfo">
+        <image src="../../img/icon/wode.png"></image>
+        <text>我的</text>
+    </view>
+</view>

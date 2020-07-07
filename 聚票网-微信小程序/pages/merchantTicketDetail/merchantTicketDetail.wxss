@@ -167,6 +167,7 @@ page{
   background-color: rgb(161, 225, 210);
 }
 
+
 .ticketdetail{
   background-color: white;
 }
@@ -175,6 +176,16 @@ page{
   width: 30%;
   height: 300rpx;
 }
+
+.submit_button {
+  position: fixed;
+  height: 60rpx;
+  font-size: 30rpx; 
+  line-height: 60rpx;
+  bottom:66rpx;
+  right:66rpx;
+}
+
 
 /* .infoEdit{
   padding: 30rpx;
