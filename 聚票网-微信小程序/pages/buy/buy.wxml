@@ -21,11 +21,19 @@
             </view>
             <view class="beizhu">
                 <text class="name">备注：</text>
-                <input bindinput="getBeizhu" placeholder="备注信息" class="beizhuInfo"></input>
+                <input bindinput="getBeizhu" placeholder="请输入备注信息" class="beizhuInfo"></input>
+            </view>
+            <view class="style">
+                <text class="name">配送：</text>
+                <text >快递 免邮</text>
+            </view>
+            <view class="yunfeixian">
+                 <text class="name">运费险：</text>
+                <text >卖家赠送</text>
             </view>
             <view class="count">
                 <text class="name">数量：</text>
-                <input bindinput="getCount" placeholder="数量" class="countInfo"></input>
+                <input bindinput="getCount" placeholder="请输入购票数量" class="countInfo"></input>
             </view>
         </view>
         <!-- </navigator> -->

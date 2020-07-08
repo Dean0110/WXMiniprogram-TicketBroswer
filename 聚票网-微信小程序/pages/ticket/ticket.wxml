@@ -12,12 +12,12 @@
 
     <view class="main">
         <view class="time">
-            <text class="dateTime">{{ticketInfo.beginTime}}</text>
-            <text class="desc">{{ticketInfo.endTime}}</text>
+            <text class="dateTime">开始：{{ticketInfo.beginTime}}</text>
+            <text class="desc">结束：{{ticketInfo.endTime}}</text>
         </view>
         <view class="place">
             <text class="housename">{{ticketInfo.address}}</text>
-            <text class="location">{{ticketInfo.address}}</text>
+            <!-- <text class="location">{{ticketInfo.address}}</text> -->
         </view>
         <view class="merchant">
             <view class="img">

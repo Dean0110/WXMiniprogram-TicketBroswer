@@ -18,10 +18,10 @@ Page({
       {"text":"儿童亲子","id":6}
     ],
     myswiperList:[
-      {"imgSrc":"../../img/sliderImage/4.jpg"},
-      {"imgSrc":"../../img/sliderImage/5.jpg"},
-      {"imgSrc":"../../img/sliderImage/6.jpg"},
-      {"imgSrc":"../../img/sliderImage/7.jpg"}
+      {"imgSrc":"../../img/sliderImage/mbttdys.png","id":'22'},
+      {"imgSrc":"../../img/sliderImage/byx.png","id":23},
+      {"imgSrc":"../../img/sliderImage/yghyh.jpg","id":24}
+      // {"imgSrc":"../../img/sliderImage/7.jpg"}
     ],
     recommendList:null,
     moreList:null,

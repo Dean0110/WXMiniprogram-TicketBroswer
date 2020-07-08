@@ -52,7 +52,7 @@
   }
 
 
-  .address,.beizhu,.count{
+  .address,.beizhu,.count,.style,.yunfeixian{
       display: flex;
       justify-content:start;
   }
@@ -66,10 +66,11 @@
       height: 500rpx;
   }
 
-  .beizhu,.count{
+  .beizhu,.count,.style,.yunfeixian{
       margin-top: 50rpx;
   }
 
+  
   .buy{
       width: 50%;
       position: absolute;

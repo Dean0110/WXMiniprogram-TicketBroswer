@@ -28,7 +28,7 @@
     <view class="slides">
         <swiper autoplay indicator-dots interval="3000" circular="{{true}}">
             <swiper-item wx:for="{{myswiperList}}" wx:key="{{index}}">
-                <navigator >
+                <navigator url="../ticket/ticket?id={{item.id}}">
                     <image mode="scaleToFill" src="{{item.imgSrc}}"/>
                 </navigator>
             </swiper-item>
