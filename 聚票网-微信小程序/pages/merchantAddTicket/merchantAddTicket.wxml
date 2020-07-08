@@ -1,0 +1,44 @@
+<!--pages/merchantAddTicket/merchantAddTicket.wxml-->
+
+<view>
+  <view class="ticketdetail">
+      <view style="display: flex; justify-content: center; align-items: center;">
+        <image class="ticket-headimage" src="{{ticketInfo.img}}"></image>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">票品URL：</view>
+        <textarea class="info-input" bindinput="inputURL" value='{{ticketInfo.img}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">票品名称：</view>
+        <textarea class="info-input" bindinput="inputName" value='{{ticketInfo.name}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">演出时间：</view>
+        <textarea class="info-input" bindinput="inputBGTime" value='{{ticketInfo.beginTime}}'></textarea>
+      </view>
+       <view class="info-box">
+        <view class="info-hint">演出地点：</view>
+        <textarea class="info-input" bindinput="inputAddress" value='{{ticketInfo.address}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">演出主体：</view>
+        <textarea class="info-input" bindinput="inputPeople" value='{{ticketInfo.people}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">票价：</view>
+        <textarea class="info-input" bindinput="inputPrice" value='{{ticketInfo.price}}'></textarea>
+      </view>
+      <view class="info-box">
+        <view class="info-hint">介绍：</view>
+        <textarea class="info-input" bindinput="inputIntro" style="height=300rpx" value='{{ticketInfo.introduction}}'></textarea>
+      </view>
+
+      <text >\n\n\n\n\n\n\n</text>
+
+  </view>
+    <button class='submit_button' bindtap='submit' type='primary'>
+    提交
+    </button> 
+</view>
+

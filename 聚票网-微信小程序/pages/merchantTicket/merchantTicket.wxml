@@ -23,7 +23,12 @@
                 </view>
             </view>
         </navigator>
+        <text>\n\n\n\n\n\n\n</text>
     </view>
+</view>
+
+<view class="add">
+    <image bindtap="addTicket" src="../../img/icon/add.png"></image>
 </view>
 
 <view class="myTabbar">

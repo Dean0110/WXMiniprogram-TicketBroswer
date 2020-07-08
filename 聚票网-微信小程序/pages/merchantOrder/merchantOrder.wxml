@@ -29,6 +29,8 @@
     </view>
 </view>
 
+<text>\n\n\n\n\n\n\n</text>
+
 <view class="myTabbar">
     <view class="littleTabbar" bindtap="switchToTicket">
         <image src="../../img/icon/shouye.png"></image>

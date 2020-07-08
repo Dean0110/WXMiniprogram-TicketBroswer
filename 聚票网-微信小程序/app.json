@@ -1,8 +1,8 @@
 {
   "pages": [
-    
-    
     "pages/home/home",
+    "pages/merchantAddTicket/merchantAddTicket",
+    "pages/merchantTicketEdit/merchantTicketEdit",
     "pages/variety/variety",
     "pages/buy/buy",
     "pages/welcome/welcome",

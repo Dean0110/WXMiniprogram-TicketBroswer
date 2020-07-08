@@ -37,7 +37,8 @@ App({
     userInfo: null,
     id:1,
     address:"重庆市沙坪坝区大学城虎溪校区",
-    phone:"15111222333"
+    phone:"15111222333",
+    merchantID:null,
   },
   data:{
     searchHistory:[

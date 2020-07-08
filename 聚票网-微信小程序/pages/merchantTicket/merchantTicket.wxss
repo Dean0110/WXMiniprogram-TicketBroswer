@@ -123,3 +123,16 @@
     font-size: 30rpx;
     text-align: center;
 }
+
+.add{
+    position: fixed;
+    bottom: 140rpx;
+    right: 30rpx;
+
+}
+
+.add image{
+    border-radius: 50%;
+    width: 100rpx;
+    height: 100rpx;
+}
