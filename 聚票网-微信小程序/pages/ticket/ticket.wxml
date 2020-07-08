@@ -23,8 +23,11 @@
                 <image mode="widthFix" src="{{merchantInfo.img}}"></image>
             </view>
             <view class="info">
-                <text class="name">商家名：{{merchantInfo.name}}</text>
-                <text class="telenumber">订阅数：{{merchantInfo.subscribeNum}}</text>
+                    <text class="name">商家名：{{merchantInfo.name}}</text>
+                    <text class="telenumber">订阅数：{{merchantInfo.subscribeNum}}</text>    
+            </view>
+            <view class="subscribe">
+                    <image bindtap="change" mode="widthFix" src="{{subimg[currImg].img}}" />
             </view>
         </view>
         <view class="function">

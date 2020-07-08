@@ -3,27 +3,20 @@
     margin:5rpx;
     position: relative;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-}
 
-.status{
-    background-color: green;
-    color:white;
-}
-
-.number{
-    font-size: 28rpx;
-}
 .info{
+    padding: 20rpx 15rpx;
+    margin-top: 30rpx;
+    margin-left: 10rpx;
     border: 5rpx solid rgb(112, 209, 208);
+    width: 92%;
     border-radius: 20rpx;
     box-shadow: 10rpx 10rpx 5rpx #888888;
 }
 .detail{
+    margin-top: 10rpx;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .detail .img{
     flex:3;
@@ -38,8 +31,9 @@
     flex-direction: column;
 }
 
-.time{
-    font-size: 40rpx;
+.time, .number{
+    font-size: 30rpx;
+    color: rgb(77, 73, 73);
 }
 
 .bottomInfo{

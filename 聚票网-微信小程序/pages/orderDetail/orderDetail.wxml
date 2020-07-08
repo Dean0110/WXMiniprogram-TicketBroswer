@@ -68,8 +68,8 @@
         </view>
     </view>
     <view class="choice">
-        <button class="again">再次购票</button>
-        <button class="quit" >取消订单</button>
+        <button bindtap="again1" class="again">再次购票</button>
+        <button bindtap="quit1" class="quit" >取消订单</button>
     </view>
     <text >\n\n\n\n\n\n\n</text>
 

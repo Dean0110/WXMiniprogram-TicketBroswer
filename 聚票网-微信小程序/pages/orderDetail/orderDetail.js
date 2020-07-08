@@ -1,10 +1,12 @@
 // pages/orderDetail/orderDetail.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    id:null,
    orderInfo:null,
   },
 
@@ -26,11 +28,30 @@ Page({
       })
   },
 
+  quit1(){
+    wx.request({
+      url: 'http://localhost:8080/order/updateOrderStateByUserId?orderId='+this.data.id+'&state=1',
+      method:"PUT"
+      // data:{
+      //   "orderId":this.data.id,
+      //   "state":1
+      // }
+    });
+    wx.navigateBack({});
+  },
+
+  again1(){
+    wx.redirectTo({
+      url: '../buy/buy?ticketId='+this.data.id,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     let id=options.id;
+    this.data.id=options.id;
     this.getOrderDetail(id);
   },
 

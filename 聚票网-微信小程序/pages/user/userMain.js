@@ -10,8 +10,8 @@ Page({
     userInfo:{},
     menuitems:[
       { text: '订阅', url: '../subscribe/subscribe', icon: '../../img/icon/dingyue.png'},
-      { text: '优惠券', url: '../discountCoupon/discountCoupon', icon: '../../img/icon/youhuiquan.png'},
-      { text: '购票人', url: '../booker/booker', icon: '../../img/icon/goupiaoren.png'},
+      // { text: '优惠券', url: '../discountCoupon/discountCoupon', icon: '../../img/icon/youhuiquan.png'},
+      // { text: '购票人', url: '../booker/booker', icon: '../../img/icon/goupiaoren.png'},
       { text: '收货地址', url: '../deliveryAddress/deliveryAddress', icon: '../../img/icon/shouhuodizhi.png'},
       { text: '修改号码', url: '../phoneModify/phoneModify', icon: '../../img/icon/xiugaihaoma.png'},
       { text: '意见反馈', url: '../feedback/feedback', icon: '../../img/icon/yijianfankui.png'}

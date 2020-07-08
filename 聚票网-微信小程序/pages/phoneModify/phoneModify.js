@@ -1,19 +1,30 @@
 // pages/phoneModify/phoneModify.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    newPhone:null,
+    userInfo:null,
+  },
 
+  change(e){
+    this.data.newPhone=e.detail.value;
   },
 
   submitPhone:function(){
+    let that=this;
     wx.showModal({
       title: "提示",
       content: "是否提交修改？",
       cancelColor: 'cancelColor',
       success(res){
+        wx.request({
+          url: 'http://localhost:8080/user/updatePhone?id='+app.globalData.id+'&phone='+that.data.newPhone,
+          method:"PUT",
+        })
         if(res.confirm){
           wx.showToast({
             title: '修改成功',
@@ -43,7 +54,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/user/findById',
+      data:{
+        "id":app.globalData.id
+      },
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+          that.setData({
+            userInfo:res.data.data
+          })
+        }
+      }      
+    })
   },
 
   /**

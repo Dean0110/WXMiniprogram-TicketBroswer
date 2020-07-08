@@ -61,13 +61,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      searchHistory:app.data.searchHistory
-      
-    });
-    this.setData({
-      searchRecommend:app.data.searchRecommend
-    })
+    
     
   },
 
@@ -82,7 +76,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      searchHistory:app.data.searchHistory
+      
+    });
+    this.setData({
+      searchRecommend:app.data.searchRecommend
+    })
   },
 
   /**

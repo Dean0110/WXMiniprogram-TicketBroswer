@@ -158,13 +158,34 @@ page{
   font-size: 36rpx;
 }
 
-.editTicketDetail{
+/* .editTicketDetail{
   font-size: 35rpx;
   position: absolute;
-  right: 50rpx;
+  right:30rpx;
   top: 140rpx;
   color: rgb(0, 0, 0);
   background-color: rgb(161, 225, 210);
+} */
+
+.editTicketDetail{
+  z-index: 2;
+  /* font-size: 35rpx; */
+  position: absolute;
+  right:10rpx;
+  top: 150rpx;
+  width:50rpx;
+  height:50rpx;
+  color: rgb(0, 0, 0);
+  /* background-color:rgb(230, 228, 228); */
+  /* background-color: rgb(161, 225, 210); */
+}
+
+.xiugai{
+  position: absolute;
+  right:60rpx;
+  top: 160rpx;
+  color: gray;
+  font-size: 28rpx;
 }
 
 

@@ -21,19 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that=this;
-    wx.request({
-      url: 'http://localhost:8080/order/findOrderMsgByUserId',
-      data:{
-        "userId":app.globalData.id
-      },
-      success(res){
-        console.log(res);
-        that.setData({
-          orderList:res.data.data
-        })
-      }
-    })
+    
   },
 
   /**
@@ -47,7 +35,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/order/findOrderMsgByUserId',
+      data:{
+        "userId":app.globalData.id
+      },
+      success(res){
+        console.log(res);
+        that.setData({
+          orderList:res.data.data
+        })
+      }
+    })
   },
 
   /**

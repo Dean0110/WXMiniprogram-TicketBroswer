@@ -27,7 +27,17 @@ Page({
       url: 'http://localhost:8080/order/insert?userId='+this.data.id+'&ticketId='+this.data.ticketid+
       '&count='+this.data.count+'&remark='+this.data.beizhu+'&address='+this.data.address,
       method:"POST",
+    });
+    wx.showToast({
+      title: '购买成功',
+      icon: 'success',
+      duration: 1000,
+      mask:true
     })
+    // wx.reLaunch({
+    //   url: '../home/home',
+    // })
+
   },
 
   /**

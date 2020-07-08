@@ -38,9 +38,9 @@ Page({
   loadOrder(){
     let that=this;
     wx.request({
-      url: 'http://localhost:8080/order/findOrderMsgByUserId',
+      url: 'http://localhost:8080/order/findOrderMsgByMerchantId',
       data:{
-        "userId":1,
+        "merchantId":this.data.merchantID
       },
       success(res){
         if(res.data.code==200){

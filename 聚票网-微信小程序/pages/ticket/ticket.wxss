@@ -113,6 +113,11 @@ page{
 /* 新增 */
 .function{
     border-bottom: 3rpx solid rgb(198, 186, 186);
+    
+}
+
+.function .recommend{
+    background-color:rgb(230, 228, 228);
 }
 .function button::after{
     border: none;
@@ -133,9 +138,11 @@ page{
 }
 
 .merchant{
+    position: relative;
     margin-top: 50rpx;
     display: flex;
-    justify-content: space-between;
+    /* flex-direction: row; */
+    justify-content: start;
 }
 .merchant .img{
     display: flex;
@@ -154,10 +161,21 @@ page{
     flex-direction: column;
     justify-content: space-between;
 }
+.merchant .subscribe{
+    display: flex;
+    justify-content: right;
+    flex:1;
+}
+.merchant .subscribe image{
+    width:80%;
+}
+
 .merchant .info text{
     color: black;
     font-size: 36rpx;
 }
+
+
 .detailinfo .title{
     margin-left: 0rpx;
     font-size: 40rpx;

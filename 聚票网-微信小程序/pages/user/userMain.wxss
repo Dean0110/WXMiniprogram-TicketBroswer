@@ -31,7 +31,7 @@
 
 .userinfo-item {
   display: flex;
-  margin: 20rpx;
+  margin: 50rpx;
   justify-content: start;
 }
 
