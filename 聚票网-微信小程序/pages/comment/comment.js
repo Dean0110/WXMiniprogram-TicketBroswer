@@ -21,26 +21,30 @@ Page({
   // 提交事件
   submit_evaluate: function () {
     // console.log('评价得分' + this.data.scores*2)
+    var that=this;
     wx.showModal({
       title: "提示",
       content: "是否提交评价？",
       cancelColor: 'cancelColor',
       success(res){
         if(res.confirm){
-          let score=this.data.score*2;
+          let score=that.data.score*2;
           wx.request({
-            url: 'http://localhost:8080/order/updateOrderCommentByUserId?id='+this.data.id+'&comment='+this.data.commentdetail+'&level='+score,
+            url: 'http://localhost:8080/order/updateOrderCommentByUserId?id='+that.data.id+'&comment='+that.data.commentdetail+'&level='+score,
             method:'PUT',
-            success({})
-          })
-          wx.showToast({
-            title: '评价成功',
+            success(res){
+              if(res.data.code==200){
+                wx.showToast({
+                  title: '评价成功',
+                })
+              }
+            }
           })
         }else if(res.cancel){
-
+          
         }
       }
-
+    })
   },
 
   //点击左边,半颗星
