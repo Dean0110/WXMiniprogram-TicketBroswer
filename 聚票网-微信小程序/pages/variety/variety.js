@@ -87,7 +87,6 @@ Page({
         }
       }
     })
-   // console.log(this.data.currindexNav);
   },
 
   /**

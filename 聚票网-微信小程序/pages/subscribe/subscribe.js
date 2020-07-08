@@ -17,7 +17,7 @@ Page({
     wx.request({
       url: 'http://localhost:8080/subscribe/findMerchantMsg',
       data:{
-        "userId":app.data.id
+        "userId":app.globalData.id
       },
       success(res){
         console.log(res);

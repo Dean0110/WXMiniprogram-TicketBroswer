@@ -1,7 +1,5 @@
 <!--pages/buy/buy.wxml-->
 <view>
-    <!-- <view class="more"> -->
-        <!-- <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" > -->
         <view class="more_item">
             <view class="img">
                 <image mode="widthFix" src="{{detail.img}}" />      
@@ -36,10 +34,5 @@
                 <input bindinput="getCount" placeholder="请输入购票数量" class="countInfo"></input>
             </view>
         </view>
-        <!-- </navigator> -->
-        <!-- <view class="bottomB"> -->
-            <!-- <text ></text> -->
             <button bindtap="insert" class="buy">确认购买</button>
-        <!-- </view> -->
-    <!-- </view> -->
     </view>

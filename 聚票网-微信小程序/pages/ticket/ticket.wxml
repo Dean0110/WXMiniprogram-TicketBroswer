@@ -17,7 +17,6 @@
         </view>
         <view class="place">
             <text class="housename">{{ticketInfo.address}}</text>
-            <!-- <text class="location">{{ticketInfo.address}}</text> -->
         </view>
         <view class="merchant">
             <view class="img">

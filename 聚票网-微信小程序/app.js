@@ -34,7 +34,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    id:1,
+    address:"重庆市沙坪坝区大学城虎溪校区",
+    phone:"15111222333"
   },
   data:{
     searchHistory:[
@@ -43,13 +46,5 @@ App({
     searchRecommend:[
       "开心麻花","曹轩宾","扯馆儿"
     ],
-    id:1,
-    address:"重庆市沙坪坝区大学城虎溪校区",
-    phone:"15111222333"
-    // userInfo:[
-    //   {"id":1,"address":"重庆市沙坪坝区大学城虎溪校区","phone":"15111222333"}
-      // {"address":"重庆市沙坪坝区大学城虎溪校区"},
-      // {"phone":"15111222333"}
-    // ]
   }
 })

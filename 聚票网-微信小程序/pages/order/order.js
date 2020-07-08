@@ -6,20 +6,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // orderList:[
-    //   {
-    //     "ticket":{
-    //       "name":"2019林俊杰[圣所]世界巡回演唱会 河南站",
-    //       "imgsrc":"../../img/orderimg/2.jpg",
-    //       "ticketPrice":380
-    //     },
-    //     "orderStatus":"交易成功",
-    //     "orderNumber":"24592077",
-    //     "startTime":"时间：2018.12.28 10:01:23",
-    //     "ticketAmount":1,
-    //     "totalPrice":380
-    //   },
-    // ]
     orderList:null,
   },
 
@@ -39,8 +25,7 @@ Page({
     wx.request({
       url: 'http://localhost:8080/order/findOrderMsgByUserId',
       data:{
-        "userId":app.data.id
-
+        "userId":app.globalData.id
       },
       success(res){
         console.log(res);

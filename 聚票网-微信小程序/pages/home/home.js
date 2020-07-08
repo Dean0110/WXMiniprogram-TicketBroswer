@@ -21,7 +21,6 @@ Page({
       {"imgSrc":"../../img/sliderImage/mbttdys.png","id":'22'},
       {"imgSrc":"../../img/sliderImage/byx.png","id":23},
       {"imgSrc":"../../img/sliderImage/yghyh.jpg","id":24}
-      // {"imgSrc":"../../img/sliderImage/7.jpg"}
     ],
     recommendList:null,
     moreList:null,
@@ -58,9 +57,6 @@ Page({
   },
 
   activeNav(e){
-     //this.data.currindexNav=e.target.dataset.index;
-     //console.log(this.data.mynavList[e.target.dataset.index].text);
-     //console.log(e.target.dataset.index);
     this.setData({
       currindexNav:e.target.dataset.index
     });
@@ -73,10 +69,11 @@ Page({
    */
   onLoad: function (options) {
     let that=this;
+    console.log(1);
     wx.request({
       url: 'http://localhost:8080/ticket/findMoreTicket',
       data:{
-        "id":app.data.id
+        "id":app.globalData.id
       },
       success(res){
         console.log(res);
@@ -90,7 +87,7 @@ Page({
     wx.request({
       url: 'http://localhost:8080/ticket/findSubscribe',
       data:{
-        "id":app.data.id
+        "id":app.globalData.id
       },
       success(res){
         console.log(res);

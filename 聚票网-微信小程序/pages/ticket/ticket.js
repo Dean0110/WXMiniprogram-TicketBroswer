@@ -17,22 +17,6 @@ Page({
     wx.navigateTo({
       url:'../buy/buy?ticketId='+this.data.ticketid
     })
-    //  console.log(this.data.ticketid);
-    // let remark="无";
-    // let count=2;
-    // wx.request({
-    //   url: 'http://localhost:8080/order/insert?userId='+app.data.id+
-    //   '&ticketId='+this.data.ticketid+'&count='+count+'&remark='+remark+'&address='+app.data.address,
-    //   method:"POST",
-    //   // header:{"content-type":"application/json"},
-    //   // data:{
-    //   //   "userId":app.data.id,
-    //   //   "ticketId":this.data.ticketid,
-    //   //   "count":2,
-    //   //   "remark":"无",
-    //   //   "address":app.data.address
-    //   // }
-    // })
   },
   /**
    * 生命周期函数--监听页面加载

@@ -8,25 +8,24 @@ Page({
   data: {
     detail:null,
     ticketid:null,
-    address:null,
+    address:app.globalData.address,
     beizhu:null,
-    count:1
+    count:1,
+    id:app.globalData.id
   },
 
   getBeizhu(e){
     this.data.beizhu=e.detail.value;
-    //console.log(this.data.beizhu);
   },
 
   getCount(e){
     this.data.count=e.detail.value;
-    //console.log(this.data.beizhu);
   },
 
   insert(){
     wx.request({
-      url: 'http://localhost:8080/order/insert?userId='+app.data.id+
-      '&ticketId='+this.data.ticketid+'&count='+this.data.count+'&remark='+this.data.beizhu+'&address='+app.data.address,
+      url: 'http://localhost:8080/order/insert?userId='+this.data.id+'&ticketId='+this.data.ticketid+
+      '&count='+this.data.count+'&remark='+this.data.beizhu+'&address='+this.data.address,
       method:"POST",
     })
   },
@@ -36,11 +35,6 @@ Page({
    */
   onLoad: function (options) {
     this.data.ticketid=options.ticketId;
-   // console.log(this.data.ticketid);
-    this.setData({
-      address:app.data.address
-    })
-   // console.log(this.data.address);
     let that=this;
     wx.request({
       url: 'http://localhost:8080/ticket/findTicketById',
@@ -49,7 +43,6 @@ Page({
       },
       success(res){
         console.log(res);
-        //this.data.detail=res.data.data;
         if(res.data.code===200){
           that.setData({
             detail:res.data.data
