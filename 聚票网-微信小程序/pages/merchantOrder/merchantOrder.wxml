@@ -1,10 +1,10 @@
 <!--pages/merchantOrder/merchantOrder.wxml-->
-<navigator url="../merchantInfoManage/merchantInfoManage?id={{merchantID}}">点击跳转：商家信息</navigator>
 <view wx:for="{{orderList}}" wx:key="{{item}}">
     <view class="order_wrap">
         <view class="header">
-            <text class="status">{{item.state}}</text>
-            <text class="ordernumber">订单编号：{{item.id}}</text>
+            <text>\n</text>
+            <!-- <text class="status">{{item.state}}</text>
+            <text class="ordernumber">订单编号：{{item.id}}</text> -->
         </view>
         <navigator class="info" url="../merchantOrderDetail/merchantOrderDetail?id=+{{item.id}}" data-index="{{item.id}}">
             <text class="title">{{item.ticketName}}</text>
