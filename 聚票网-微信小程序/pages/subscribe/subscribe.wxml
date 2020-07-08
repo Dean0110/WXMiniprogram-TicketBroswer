@@ -3,11 +3,11 @@
     <view class="subscribe_item" 
     wx:for="{{subscribeList}}" wx:key="{{index}}">
         <view class="img">
-            <image mode="widthFix" src="{{item.imgSrc}}"/>
+            <image mode="widthFix" src="{{item.img}}"/>
         </view>
         <view class="info">
             <text class="name">{{item.name}}</text>
-            <text class="desc">近期有{{item.number}}场演出</text>
+            <text class="desc">订阅数：{{item.subscribeNum}}</text>
         </view>
     </view>
 </view>

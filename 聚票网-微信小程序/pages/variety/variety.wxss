@@ -1,46 +1,4 @@
-
-/* 头部信息 */
-.input-hint{
-  font-size: 35rpx;
-  justify-content: center;
-}
-
-
-.title_info text{
-  font-size:40rpx;
-  color:black;
-  flex:2;
-  margin-left: 50rpx;
-  padding-left: 30rpx;
-  font-weight: bolder;
-  display: flex;
-  justify-content: left;
-  align-items: top;
-}
-
-.title_info image{
-  width: 63rpx;
-  height: 63rpx;
-  margin: auto;
-}
-
-.title_info {
-  margin-top: 20rpx;
-  display: flex;
-  justify-content: start;
-}
-
-.title-more{
-  margin: auto;
-  margin-left: 30rpx; 
-}
-
-.searchPage{
-  width: max-content;
-  border: 5rpx solid #666;
-  border-radius: 30rpx;
-}
-
+/* pages/variety/variety.wxss */
 /* 导航项 */
 .nav{
   /* 里面的元素不进行换行 */
@@ -57,63 +15,6 @@
 .nav_item.active{
   border-bottom: 5rpx solid #de688b;
 }
-
-/* 推荐 */
-.rc{
-  margin-top: 50rpx;
-}
-.rc text{
-  margin-top:10rpx;
-  padding: 10rpx;
-  font-size: 40rpx;
-  color: black;
-  font-weight: bolder;
-}
-.recommend{
-  white-space: nowrap;
-  padding:5rpx;
-}
-
-.recommend_item{
-  position: relative;
-  padding:10rpx 10rpx;
-  display: inline-block;
-  
-}
-
-.recommend_item image{
-  width: 200rpx;
-}
-.recommend_item text{
-  position: absolute;
-  top:10rpx;
-  right:10rpx;
-  font-size:28rpx;
-  color:white;
-  background-color: black;
-}
-
-
-/* 轮播图 */
-.slides{
-  margin-top: 10rpx;
-  padding-left:50rpx;
-  padding-right:50rpx;
-}
-.slides swiper{
-  height: 300rpx;
-}
-.slides navigator{
-  width: 100%;
-  height:100%;
-} 
-.slides image{
-  width: 100%;
-  height:100%;
-  border-radius: 50rpx;
-}
-
-/* 推荐菜单 */
 
 .more_item{
   
@@ -157,8 +58,6 @@
   left: 30rpx;
   bottom: 2rpx;
 }
-
-/*更多按钮*/
 
 .more_view{
   width: 100%;

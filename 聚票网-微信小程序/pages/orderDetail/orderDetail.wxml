@@ -16,10 +16,6 @@
             <text class="time">{{orderInfo.beginTime}}</text>
         </view>
     </view>
-        <!-- <view class="choice">
-            <button>取消订单</button>
-            <button>支付</button>
-        </view> -->
     <view class="OrderInformation">
         <view class="OrderInfo">
             <text class="Orderinfo">订单信息</text>

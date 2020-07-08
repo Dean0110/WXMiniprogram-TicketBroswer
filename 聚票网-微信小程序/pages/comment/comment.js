@@ -9,8 +9,15 @@ Page({
     halfSrc: '../../img/icon/half-star.png',
     score: 0,
     scores: [0],
+    commentdetail:null,
+    id:null
   },
 
+  commentInfo(e){
+    this.setData({
+      commentdetail:e.detail.value
+    }) 
+  },
   // 提交事件
   submit_evaluate: function () {
     // console.log('评价得分' + this.data.scores*2)
@@ -20,6 +27,12 @@ Page({
       cancelColor: 'cancelColor',
       success(res){
         if(res.confirm){
+          let score=this.data.score*2;
+          wx.request({
+            url: 'http://localhost:8080/order/updateOrderCommentByUserId?id='+this.data.id+'&comment='+this.data.commentdetail+'&level='+score,
+            method:'PUT',
+            success({})
+          })
           wx.showToast({
             title: '评价成功',
           })
@@ -27,7 +40,7 @@ Page({
 
         }
       }
-    })
+
   },
 
   //点击左边,半颗星
@@ -57,13 +70,14 @@ Page({
   },
 
   onLoad:function(options){
-    let id=options.id;
-    console.log(id);
     let that=this;
+    this.setData({
+      id:options.id
+    })
     wx.request({
       url: 'http://localhost:8080/order/findOrderMsgById',
       data:{
-        "orderId":id
+        "orderId":this.data.id
       },
       success(res){
         console.log(res);

@@ -1,31 +1,33 @@
 // pages/subscribe/subscribe.js
+const app=getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    subscribeList:[
-    { "name":"林俊杰",
-      "imgSrc":"../../img/subscribe/linjunjie.jpg",
-      "number":4
-    },
-    { "name":"周杰伦",
-      "imgSrc":"../../img/subscribe/zhoujielun.jpg",
-      "number":5
-    },
-    { "name":"刘德华",
-      "imgSrc":"../../img/subscribe/liudehua.jpg",
-      "number":2
-    }
-  ]
-
+    subscribeList:null,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that=this;
+    wx.request({
+      url: 'http://localhost:8080/subscribe/findMerchantMsg',
+      data:{
+        "userId":app.globalData.id
+      },
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+          that.setData({
+            subscribeList:res.data.data
+          })
+        }
+      }
+    })
 
   },
 

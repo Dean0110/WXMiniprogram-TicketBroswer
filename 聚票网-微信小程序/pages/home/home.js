@@ -1,4 +1,5 @@
 // pages/home/home.js
+const app=getApp()
 Page({
 
   /**
@@ -8,17 +9,18 @@ Page({
     showMoreView:false,
     currindexNav:0,
     mynavList:[
-      {"text":"演唱会","id":0},
-      {"text":"展览休闲","id":1},
+      {"text":"全部","id":0},
+      {"text":"演唱会","id":1},
       {"text":"话剧歌剧","id":2},
-      {"text":"音乐剧","id":3},
-      {"text":"全部分类","id":4}
+      {"text":"音乐会","id":3},
+      {"text":"展览休闲","id":4},
+      {"text":"曲苑杂坛","id":5},
+      {"text":"儿童亲子","id":6}
     ],
     myswiperList:[
-      {"imgSrc":"../../img/sliderImage/4.jpg"},
-      {"imgSrc":"../../img/sliderImage/5.jpg"},
-      {"imgSrc":"../../img/sliderImage/6.jpg"},
-      {"imgSrc":"../../img/sliderImage/7.jpg"}
+      {"imgSrc":"../../img/sliderImage/mbttdys.png","id":'22'},
+      {"imgSrc":"../../img/sliderImage/byx.png","id":23},
+      {"imgSrc":"../../img/sliderImage/yghyh.jpg","id":24}
     ],
     recommendList:null,
     moreList:null,
@@ -56,9 +58,11 @@ Page({
   },
 
   activeNav(e){
-    // console.log(this.data.mynavList[e.target.dataset.index].text);
     this.setData({
       currindexNav:e.target.dataset.index
+    });
+    wx.navigateTo({
+      url: '../variety/variety?tagname='+this.data.mynavList[this.data.currindexNav].text+"&index="+this.data.currindexNav,
     })
     },
   /**
@@ -66,16 +70,31 @@ Page({
    */
   onLoad: function (options) {
     let that=this;
+    console.log(1);
     wx.request({
-      url: 'http://localhost:8080/ticket/all',
+      url: 'http://localhost:8080/ticket/findMoreTicket',
+      data:{
+        "id":app.globalData.id
+      },
+      success(res){
+        console.log(res);
+        if(res.data.code===200){
+          that.setData({
+            moreList:res.data.data
+          })
+        }
+      }
+    }),
+    wx.request({
+      url: 'http://localhost:8080/ticket/findSubscribe',
+      data:{
+        "id":app.globalData.id
+      },
       success(res){
         console.log(res);
         if(res.data.code===200){
           that.setData({
             recommendList:res.data.data
-          }),
-          that.setData({
-            moreList:res.data.data
           })
         }
       }

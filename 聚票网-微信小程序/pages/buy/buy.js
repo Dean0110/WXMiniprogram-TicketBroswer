@@ -1,4 +1,4 @@
-// pages/order/order.js
+// pages/buy/buy.js
 const app=getApp()
 Page({
 
@@ -6,32 +6,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-    orderList:null,
+    detail:null,
+    ticketid:null,
+    address:app.globalData.address,
+    beizhu:null,
+    count:1,
+    id:app.globalData.id
   },
 
-  change:function(event){
-    
-    let id=event.currentTarget.dataset.index;
-    console.log(id);
-    wx.navigateTo({
-      url: '../comment/comment?id='+id,
+  getBeizhu(e){
+    this.data.beizhu=e.detail.value;
+  },
+
+  getCount(e){
+    this.data.count=e.detail.value;
+  },
+
+  insert(){
+    wx.request({
+      url: 'http://localhost:8080/order/insert?userId='+this.data.id+'&ticketId='+this.data.ticketid+
+      '&count='+this.data.count+'&remark='+this.data.beizhu+'&address='+this.data.address,
+      method:"POST",
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.data.ticketid=options.ticketId;
     let that=this;
     wx.request({
-      url: 'http://localhost:8080/order/findOrderMsgByUserId',
+      url: 'http://localhost:8080/ticket/findTicketById',
       data:{
-        "userId":app.globalData.id
+        "id":this.data.ticketid
       },
       success(res){
         console.log(res);
-        that.setData({
-          orderList:res.data.data
-        })
+        if(res.data.code===200){
+          that.setData({
+            detail:res.data.data
+          })
+        }
       }
     })
   },
@@ -40,7 +56,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**

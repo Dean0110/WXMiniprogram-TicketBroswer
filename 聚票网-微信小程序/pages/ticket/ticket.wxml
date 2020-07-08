@@ -12,37 +12,48 @@
 
     <view class="main">
         <view class="time">
-            <text class="dateTime">{{ticketInfo.beginTime}}</text>
-            <text class="desc">{{ticketInfo.endTime}}</text>
+            <text class="dateTime">开始：{{ticketInfo.beginTime}}</text>
+            <text class="desc">结束：{{ticketInfo.endTime}}</text>
         </view>
         <view class="place">
             <text class="housename">{{ticketInfo.address}}</text>
-            <text class="location">{{ticketInfo.address}}</text>
         </view>
         <view class="merchant">
             <view class="img">
-                <image mode="widthFix" src="../../img/icon/goupiaoren.png"></image>
+                <image mode="widthFix" src="{{merchantInfo.img}}"></image>
             </view>
             <view class="info">
-                <text class="name">商家名</text>
-                <text class="level">商家等级</text>
-                <text class="telenumber">商家电话</text>
+                <text class="name">商家名：{{merchantInfo.name}}</text>
+                <text class="telenumber">订阅数：{{merchantInfo.subscribeNum}}</text>
             </view>
         </view>
         <view class="function">
             <button class="detail">详情</button>
-            <button class="notice">须知</button>
-            <button class="comment">评价</button>
+            <!-- <button class="notice">评价</button> -->
+            <button class="recommend">须知</button>
         </view>
         
         <view class="bottomB">  
             <button class="share">分享</button>
-            <button class="purchase">立即购买</button>
+            <button bindtap="buy" class="purchase">立即购买</button>
         </view>
 
         <view class="detailinfo">
+            <text class="title">详情</text>
             <text class="desc">{{ticketInfo.introduction}}</text>
             <image mode="scaleToFill" src="{{ticketInfo.img}}" />
         </view>
+
+        <view class="mentionDetail">
+            <text class="title">须知</text>
+            <text class="info">{{mentionDetail}}</text>
+        </view>
+        <text >\n</text>
+        <text >\n</text>
+        <text >\n</text>
+        <text >\n</text>
+        <text >\n</text>
+        <text >\n</text>
+        <text >\n</text>
     </view>
 </view>
