@@ -8,7 +8,7 @@
         <text>不好意思，没有找到呢</text>
     </view>
     <view class="list">
-        <navigator class="info" wx:for="{{ticketInfoList}}" wx:key="{{index}}" url="../ticket/ticket?id={{item.id}}">
+        <navigator class="info" wx:for="{{ticketInfoList}}" wx:key="{{index}}" wx:if="{{index<=showIndex}}" url="../ticket/ticket?id={{item.id}}">
             <view class="img">
                 <image src="{{item.img}}" mode="widthFix" />
             </view>

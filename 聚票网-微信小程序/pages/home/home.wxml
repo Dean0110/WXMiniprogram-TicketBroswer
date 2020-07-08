@@ -52,7 +52,7 @@
     <view>
         <text style="margin:10rpx;color:black;font-size:40rpx;font-weight:bold;">更多</text>
         <view class="more">
-             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" wx:if="{{index>=5}}">
+             <navigator url="../ticket/ticket?id={{item.id}}" class="more_item" wx:for="{{moreList}}" wx:key="{{index}}" wx:if="{{index<=showIndex}}">
                 <view class="img">
                     <image mode="widthFix" src="{{item.img}}" />
                     

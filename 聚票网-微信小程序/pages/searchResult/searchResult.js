@@ -7,6 +7,7 @@ Page({
   data: {
     searchContent:'',
     ticketInfoList:null,
+    showIndex:5,
   },
 
   back() {
@@ -110,7 +111,9 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.setData({
+      showIndex:this.data.showIndex+6,
+    })
   },
 
   /**
