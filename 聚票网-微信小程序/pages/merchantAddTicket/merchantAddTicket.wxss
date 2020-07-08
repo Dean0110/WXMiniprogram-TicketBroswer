@@ -1,0 +1,54 @@
+/* pages/merchantAddTicket/merchantAddTicket.wxss */
+
+page{
+  background-color: rgb(66, 64, 64);
+}
+
+.editTicketDetail{
+  font-size: 35rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 140rpx;
+  color: rgb(0, 0, 0);
+  background-color: rgb(161, 225, 210);
+}
+
+
+.ticketdetail{
+  background-color: rgb(230, 228, 228);
+}
+
+.ticket-headimage{
+  width: 30%;
+  height: 300rpx;
+}
+
+.submit_button {
+  position: fixed;
+  height: 60rpx;
+  font-size: 30rpx; 
+  line-height: 60rpx;
+  bottom:66rpx;
+  right:66rpx;
+  z-index: 10;
+}
+
+
+
+/* .info-box{
+  padding: 30rpx;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 3rpx solid #666;
+} */
+
+.info-hint{
+  font-size: 35rpx;
+  color:gray;
+}
+
+.info-input{
+  margin: auto;
+  border: 5rpx solid #aaa;
+}

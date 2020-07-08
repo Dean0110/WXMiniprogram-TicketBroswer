@@ -1,5 +1,4 @@
 <!--pages/merchantOrder/merchantOrder.wxml-->
-<navigator url="../merchantInfoManage/merchantInfoManage?id={{merchantID}}">点击跳转：商家信息</navigator>
 <view wx:for="{{orderList}}" wx:key="{{item}}">
     <view class="order_wrap">
         <!-- <view class="header">
@@ -33,6 +32,8 @@
 <text>\n</text>
 <text>\n</text>
 <text>\n</text>
+
+<text>\n\n\n\n\n\n\n</text>
 
 <view class="myTabbar">
     <view class="littleTabbar" bindtap="switchToTicket">

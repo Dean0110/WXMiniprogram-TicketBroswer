@@ -31,6 +31,7 @@ Page({
       },
       success(res){
         if(res.data.code==200){
+          getApp().globalData.merchantID=that.data.merchantID;
           wx.reLaunch({
             url: '../merchantTicket/merchantTicket?id='+that.data.merchantID,
           })

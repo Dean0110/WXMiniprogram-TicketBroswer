@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    ticketID:null,
     editTicket:false,
     ticketInfo:null,
   },
@@ -28,8 +29,8 @@ Page({
   },
 
   openEdit(){
-    this.setData({
-      editTicket:true,
+    wx.navigateTo({
+      url: '../merchantTicketEdit/merchantTicketEdit?id='+this.data.ticketID,
     })
   },
 
@@ -52,6 +53,9 @@ Page({
    */
   onLoad: function (options) {
     let id=options.id;
+    this.setData({
+      ticketID:id,
+    })
     this.getCurrTicketInfo(id);
   },
 

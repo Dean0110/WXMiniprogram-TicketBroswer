@@ -56,6 +56,13 @@ Page({
  
   },
 
+  addTicket(){
+    var that=this;
+    wx.navigateTo({
+      url: '../merchantAddTicket/merchantAddTicket?id='+that.data.merchantID,
+    })
+  },
+
   deleteTicket(event){
 
     let id=event.currentTarget.dataset.index;
