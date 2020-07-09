@@ -45,7 +45,7 @@ page{
     position: absolute;
     top: 150rpx;
     width: 100%;
-    background-color:rgb(230, 228, 228);
+    background-color:white;
     z-index: -10;
     border-radius: 20rpx 20rpx 0 0;
 }
@@ -81,7 +81,7 @@ page{
     justify-content: space-between;
 }
 .detail,.notice,.comment{
-    background-color:rgb(230, 228, 228);
+    background-color:white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +92,8 @@ page{
     position: fixed;
     bottom:10rpx;
     display: flex;
-    justify-content: space-between;
+    margin: auto;
+    align-items: center;
 }
 
 .share {
@@ -104,8 +105,9 @@ page{
 
 .purchase{
     flex:3;
-    width: 50%;
-    background-color: red;
+    width: fit-content;
+    margin: auto;
+    background-color: #00aa99;
     border-radius: 50rpx;
 }
 
@@ -117,7 +119,7 @@ page{
 }
 
 .function .recommend{
-    background-color:rgb(230, 228, 228);
+    background-color:white;
 }
 .function button::after{
     border: none;
@@ -194,7 +196,7 @@ page{
     margin-left: 50rpx;
     font-size:30rpx;
     display: flex;
-    color: gray;
+    color: white;
     width: 80%;
     justify-content: center;
 }

@@ -17,8 +17,10 @@
   margin-left: 30rpx;
 }
 
-image{
-  margin-left: 650rpx;
-  margin-top: 20rpx;
-  width: 100rpx;
+button{
+  position: absolute;
+  margin-top: 100rpx;
+  right: 100rpx;
+  font-size: 35rpx;
+  width: fit-content;
 }

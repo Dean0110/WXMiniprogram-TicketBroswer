@@ -15,7 +15,7 @@ page{
 
 
 .ticketdetail{
-  background-color: rgb(230, 228, 228);
+  background-color:white;
 }
 
 .ticket-headimage{

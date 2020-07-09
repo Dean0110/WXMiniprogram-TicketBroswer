@@ -22,7 +22,7 @@
   margin-top:30rpx;
   margin-left:10rpx;
   width: 92%;
-  border: 5rpx solid rgb(112, 209, 208);
+  /* border: 5rpx solid rgb(112, 209, 208); */
   border-radius: 20rpx;
   box-shadow: 10rpx 10rpx 5rpx #888888;
 }

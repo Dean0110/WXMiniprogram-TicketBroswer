@@ -8,7 +8,7 @@
     padding: 20rpx 15rpx;
     margin-top: 30rpx;
     margin-left: 10rpx;
-    border: 5rpx solid rgb(112, 209, 208);
+    /* border: 5rpx solid rgb(112, 209, 208); */
     width: 92%;
     border-radius: 20rpx;
     box-shadow: 10rpx 10rpx 5rpx #888888;
